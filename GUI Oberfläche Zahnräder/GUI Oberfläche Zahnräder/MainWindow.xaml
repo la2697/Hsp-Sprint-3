@@ -21,11 +21,11 @@
 
 
         </Label>
-        <Image HorizontalAlignment="Left" Height="100" Margin="698,254,0,0" VerticalAlignment="Top" Width="100" Source="Innenrad.PNG"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="534,254,0,0" VerticalAlignment="Top" Width="100" Source="Kegelrad.PNG"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="534,115,0,0" VerticalAlignment="Top" Width="100" Source="Stirnrad SV.PNG"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="698,115,0,0" VerticalAlignment="Top" Width="100" Source="Stirnrad.PNG"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="684,10,0,0" VerticalAlignment="Top" Width="200" Source="Jade Hochschule Logo.jpg"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="698,254,0,0" VerticalAlignment="Top" Width="100" Source="/Bilder/Innenrad.PNG"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="534,254,0,0" VerticalAlignment="Top" Width="100" Source="/Bilder/Kegelrad.PNG"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="534,115,0,0" VerticalAlignment="Top" Width="100" Source="/Bilder/Stirnrad SV.PNG"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="698,115,0,0" VerticalAlignment="Top" Width="100" Source="/Bilder/Stirnrad.PNG"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="684,10,0,0" VerticalAlignment="Top" Width="200" Source="/Bilder/Jade Hochschule Logo.jpg"/>
         <RadioButton Content="EN-GJL-200" HorizontalAlignment="Left" Margin="215,262,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="EN-GJL-350" HorizontalAlignment="Left" Margin="215,282,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="S235JR" HorizontalAlignment="Left" Margin="215,302,0,0" VerticalAlignment="Top"/>

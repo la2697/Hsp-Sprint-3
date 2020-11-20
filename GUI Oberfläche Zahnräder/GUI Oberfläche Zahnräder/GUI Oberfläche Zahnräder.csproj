@@ -95,19 +95,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Innenrad.PNG" />
+    <Resource Include="Bilder\Innenrad.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Kegelrad.PNG" />
+    <Resource Include="Bilder\Kegelrad.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Stirnrad SV.PNG" />
+    <Resource Include="Bilder\Stirnrad SV.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Stirnrad.PNG" />
+    <Resource Include="Bilder\Stirnrad.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Jade Hochschule Logo.jpg" />
+    <Resource Include="Bilder\Jade Hochschule Logo.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\Firma.PNG" />
+    <Resource Include="Bilder\Firmenname.PNG" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
