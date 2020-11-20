@@ -1,0 +1,39 @@
+﻿<Window x:Class="GUI_Oberfläche_Zahnräder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI_Oberfläche_Zahnräder"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="900">
+    <Grid  >
+        <TreeView x:Name="Baum_Zahnräder" HorizontalAlignment="Left" Height="176" Margin="10,10,0,0" VerticalAlignment="Top" Width="185" RenderTransformOrigin="0.546,0.506">
+            <TreeViewItem x:Name="tr_Stirnrad" Header="Stirnrad" >
+                <TreeViewItem x:Name="tr_Gerade_Verzahnung" Header="Gerade Verzahnung"/>
+                <TreeViewItem x:Name="tr_Schräg_Verzahnung" Header="Schräg Verzahnung"/>
+            </TreeViewItem>
+
+            <TreeViewItem x:Name="tr_Kegelrad" Header="Kegelrad" />
+            <TreeViewItem x:Name="tr_Stirnrad_mit_Innenverzahnung" Header="Stirnrad mit Innenverzahnung" />
+
+        </TreeView>
+        <Label Margin="215,10,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" >Wähle ein Werkstoff
+            
+        
+        </Label>
+        <Image HorizontalAlignment="Left" Height="100" Margin="518,131,0,0" VerticalAlignment="Top" Width="100" Source="Innenrad.PNG"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="404,131,0,0" VerticalAlignment="Top" Width="100" Source="Kegelrad.PNG"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="404,10,0,0" VerticalAlignment="Top" Width="100" Source="Stirnrad SV.PNG"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="518,10,0,0" VerticalAlignment="Top" Width="100" Source="Stirnrad.PNG"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="684,10,0,0" VerticalAlignment="Top" Width="200" Source="Jade Hochschule Logo.jpg"/>
+        <RadioButton Content="EN-GJL-200" HorizontalAlignment="Left" Margin="215,35,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="EN-GJL-350" HorizontalAlignment="Left" Margin="215,55,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="S235JR" HorizontalAlignment="Left" Margin="215,75,0,0" VerticalAlignment="Top"/>
+        <Label Content="Wähle ein Kopfspiel" HorizontalAlignment="Left" Margin="215,130,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Stadardkopfspiel 0,167 DIN 867" HorizontalAlignment="Left" Margin="215,155,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Kopfspiel 0,1 DIN 867" HorizontalAlignment="Left" Margin="215,175,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Kopfspiel 0,3 DIN 867" HorizontalAlignment="Left" Margin="215,195,0,0" VerticalAlignment="Top"/>
+
+
+    </Grid>
+</Window>
