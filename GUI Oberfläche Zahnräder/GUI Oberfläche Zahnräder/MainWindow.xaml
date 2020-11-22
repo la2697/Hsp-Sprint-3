@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI_Oberfläche_Zahnräder"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="900">
+        Title="MainWindow" ResizeMode="NoResize" Height="600" Width="1200">
     <Grid  >
-        <TreeView x:Name="Baum_Zahnräder" HorizontalAlignment="Left" Height="176" Margin="10,130,0,0" VerticalAlignment="Top" Width="185" RenderTransformOrigin="0.546,0.506">
+        <TreeView x:Name="Baum_Zahnräder" HorizontalAlignment="Left" Height="100" Margin="10,150,0,0" VerticalAlignment="Top" Width="185" RenderTransformOrigin="0.546,0.506">
             <TreeViewItem x:Name="tr_Stirnrad" Header="Stirnrad" >
                 <TreeViewItem x:Name="tr_Gerade_Verzahnung" Header="Gerade Verzahnung"/>
                 <TreeViewItem x:Name="tr_Schräg_Verzahnung" Header="Schräg Verzahnung"/>
@@ -17,24 +17,32 @@
             <TreeViewItem x:Name="tr_Stirnrad_mit_Innenverzahnung" Header="Stirnrad mit Innenverzahnung" />
 
         </TreeView>
-        <Label Margin="212,236,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" >Wähle ein Werkstoff
+        <Label x:Name="lb_Werkstoffwahl" Margin="11,277,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" >Wähle ein Werkstoff</Label>
+        <Image x:Name="Im_Innenzahnrad" HorizontalAlignment="Left" Height="100" Margin="698,254,0,0" VerticalAlignment="Top" Width="100" Source="/Bilder/Innenrad.PNG"/>
+        <Image x:Name="Im_Kegelrad" HorizontalAlignment="Left" Height="100" Margin="534,254,0,0" VerticalAlignment="Top" Width="100" Source="/Bilder/Kegelrad.PNG"/>
+        <Image x:Name="Im_SchrägZahnrad" HorizontalAlignment="Left" Height="100" Margin="534,115,0,0" VerticalAlignment="Top" Width="100" Source="/Bilder/Stirnrad SV.PNG" OpacityMask="Black"/>
+        <Image x:Name="Im_GeradZahnrad" HorizontalAlignment="Left" Height="100" Margin="698,115,0,0" VerticalAlignment="Top" Width="100" Source="/Bilder/Stirnrad.PNG"/>
+        <Image x:Name="Im_LogoJade" HorizontalAlignment="Left" Height="100" Margin="984,10,0,0" VerticalAlignment="Top" Width="200" Source="/Bilder/Jade Hochschule Logo.jpg"/>
+        <RadioButton x:Name="rtb_EN_GJL" GroupName="Werkstoff" Content="EN-GJL-200" HorizontalAlignment="Left" Margin="11,299,0,0" VerticalAlignment="Top" />
+        <RadioButton x:Name="rtb_EN_GJS" GroupName="Werkstoff" Content="EN-GJS-350" HorizontalAlignment="Left" Margin="11,319,0,0" VerticalAlignment="Top" />
+        <RadioButton x:Name="rtb_S235JR" GroupName="Werkstoff" Content="S235JR" HorizontalAlignment="Left" Margin="11,339,0,0" VerticalAlignment="Top" />
+        <Label x:Name="lb_Kopfspiel" Content="Wähle ein Kopfspiel" HorizontalAlignment="Left" Margin="11,367,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rtb_Standard" GroupName="Kopf" Content="Stadardkopfspiel 0,167 DIN 867" HorizontalAlignment="Left" Margin="11,392,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rtb_0_1" GroupName="Kopf" Content="Kopfspiel 0,1 DIN 867" HorizontalAlignment="Left" Margin="11,412,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rtb_0_3" GroupName="Kopf" Content="Kopfspiel 0,3 DIN 867" HorizontalAlignment="Left" Margin="11,432,0,0" VerticalAlignment="Top"/>
+        <Image x:Name="Im_Geschäftsführer" Source="/Bilder/Firma.png" HorizontalAlignment="Left" Height="78" Margin="10,10,0,0" VerticalAlignment="Top" Width="135"/>
+        <Image x:Name="Im_Firmenlogo" Source="/Bilder/Firmenname.png"  HorizontalAlignment="Left" Height="38" Margin="340,10,0,0" VerticalAlignment="Top" Width="504"/>
+        <Label x:Name="lb_Geschäftsführer" Content="Geschäftsführer Kai Mecke" HorizontalAlignment="Left" Margin="145,43,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lb_Zahnradwahl" Content="Wählen Sie ein Zahnrad aus" HorizontalAlignment="Left" Margin="11,124,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lb_Modul" Content="Geben Sie ihr Modul ein" HorizontalAlignment="Left" Margin="223,124,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_Modul" HorizontalAlignment="Left" Height="23" Margin="223,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lb_Zähnezahl" Content="Geben Sie ihre Zähnezahl an" HorizontalAlignment="Left" Margin="223,197,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_Zähne" HorizontalAlignment="Left" Height="23" Margin="223,228,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lb_Teilkreisdurchmesser" Content="Geben Sie ihren Teilkreisdurchmesser an" HorizontalAlignment="Left" Margin="223,277,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_Teilkreis" HorizontalAlignment="Left" Height="23" Margin="223,311,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lb_Breite" Content="Geben Sie ihre Breite an" HorizontalAlignment="Left" Margin="223,358,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_Breite" HorizontalAlignment="Left" Height="23" Margin="223,392,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
-
-        </Label>
-        <Image HorizontalAlignment="Left" Height="100" Margin="698,254,0,0" VerticalAlignment="Top" Width="100" Source="/Bilder/Innenrad.PNG"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="534,254,0,0" VerticalAlignment="Top" Width="100" Source="/Bilder/Kegelrad.PNG"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="534,115,0,0" VerticalAlignment="Top" Width="100" Source="/Bilder/Stirnrad SV.PNG"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="698,115,0,0" VerticalAlignment="Top" Width="100" Source="/Bilder/Stirnrad.PNG"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="684,10,0,0" VerticalAlignment="Top" Width="200" Source="/Bilder/Jade Hochschule Logo.jpg"/>
-        <RadioButton Content="EN-GJL-200" HorizontalAlignment="Left" Margin="215,262,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="EN-GJL-350" HorizontalAlignment="Left" Margin="215,282,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="S235JR" HorizontalAlignment="Left" Margin="215,302,0,0" VerticalAlignment="Top"/>
-        <Label Content="Wähle ein Kopfspiel" HorizontalAlignment="Left" Margin="215,130,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Stadardkopfspiel 0,167 DIN 867" HorizontalAlignment="Left" Margin="215,155,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Kopfspiel 0,1 DIN 867" HorizontalAlignment="Left" Margin="215,175,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Kopfspiel 0,3 DIN 867" HorizontalAlignment="Left" Margin="215,195,0,0" VerticalAlignment="Top"/>
-        <Image Source="/Bilder/Firma.png" HorizontalAlignment="Left" Height="78" Margin="10,10,0,0" VerticalAlignment="Top" Width="135"/>
-        <Image Source="/Bilder/Firmenname.png"  HorizontalAlignment="Left" Height="38" Margin="180,50,0,0" VerticalAlignment="Top" Width="504"/>
 
 
     </Grid>
