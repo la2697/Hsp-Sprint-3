@@ -18,16 +18,30 @@ namespace GUI_Oberfläche_Zahnräder
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window 
     {
+        
         public MainWindow()
         {
-            InitializeComponent();
+            
+            
         }
+
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
+
+      
+
+       
+
+        
+
     }
+   
+
+
+
 }
