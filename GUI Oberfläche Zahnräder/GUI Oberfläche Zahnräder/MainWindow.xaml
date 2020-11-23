@@ -16,137 +16,154 @@
         </TreeView>
 
         <Image HorizontalAlignment="Right" Height="124" Margin="0,10,10,0" VerticalAlignment="Top" Width="276" Source="/Bilder/Jade Hochschule Logo.jpg"/>
-            <Image Source="/Bilder/Firma.png" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="167"/>
-            <Grid HorizontalAlignment="Left" Height="206" Margin="297,172,0,0" VerticalAlignment="Top" Width="335">
+        <Image Source="/Bilder/Firma.png" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="167" Margin="0,15,0,0"/>
+        <Grid HorizontalAlignment="Left" Height="206" Margin="297,172,0,0" VerticalAlignment="Top" Width="335">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FF7A7A7A" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Label Content="Modul:" VerticalAlignment="Top" FontFamily="Arial" FontSize="18" Margin="20,43,0,0"/>
+            <TextBox x:Name="tb_Modul" HorizontalAlignment="Left" Height="33" Margin="259,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" TextChanged="TextBox_TextChanged" FontFamily="Arial" FontSize="20"/>
+            <Label Content="Zähnezahl:" Margin="20,98,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+            <TextBox x:Name="tb_Zänezahl" HorizontalAlignment="Left" Height="33" Margin="259,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" FontFamily="Arial" FontSize="20"/>
+            <Label Content="Dicke [mm]:" Margin="20,153,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+            <TextBox x:Name="tb_Dicke" HorizontalAlignment="Left" Height="33" Margin="259,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" RenderTransformOrigin="0.444,2.03" FontFamily="Arial" FontSize="20"/>
+            <Label Content="Zahnradparameter:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="43" Width="284" FontFamily="Arial" FontSize="22" FontWeight="Bold" Margin="5,5,0,0"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="464" Margin="660,170,0,0" VerticalAlignment="Top" Width="516">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FF646464" Offset="1"/>
+                    <GradientStop Color="#FF666666" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid HorizontalAlignment="Left" Height="193" Margin="10,63,0,0" VerticalAlignment="Top" Width="244">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF8B8B8B" Offset="0.238"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="82*"/>
+                    <ColumnDefinition Width="35*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="34*"/>
+                    <RowDefinition Height="27*"/>
+                </Grid.RowDefinitions>
+                <RadioButton x:Name="rb_Stirnzahnrad" Content="Stirnzahnrad" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" FontFamily="Arial" FontSize="18" Margin="60,10,0,0"/>
+                <Image HorizontalAlignment="Left" Height="126" Margin="60,57,0,0" VerticalAlignment="Top" Width="127" Source="/Bilder/Stirnrad.PNG" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="244" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+            </Grid>
+            <Label Content="Wähle ein Zahnradtyp:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="260" FontSize="22" FontFamily="Arial" FontWeight="Bold" Margin="5,5,0,0"/>
+            <Grid HorizontalAlignment="Left" Height="193" Margin="262,63,0,0" VerticalAlignment="Top" Width="244">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF878787" Offset="0.235"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Image Height="132" Margin="60,51,0,0" VerticalAlignment="Top" Source="/Bilder/Stirnrad SV.PNG" HorizontalAlignment="Left" Width="133"/>
+                <RadioButton x:Name="rb_Strinradschräg" Content="Stirnrad schrägverzahnt" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18" Height="27" Width="234"/>
+                <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="244"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="193" Margin="10,261,0,0" VerticalAlignment="Top" Width="244">
                 <Grid.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="White"/>
-                        <GradientStop Color="#FF7A7A7A" Offset="1"/>
+                        <GradientStop Color="Gray" Offset="0.254"/>
+                        <GradientStop Color="White" Offset="1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <Label Content="Modul:" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Margin="0,43,0,0"/>
-                <TextBox HorizontalAlignment="Left" Height="33" Margin="230,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" TextChanged="TextBox_TextChanged" FontFamily="Arial" FontSize="20"/>
-                <Label Content="Zähnezahl:" Margin="0,98,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
-                <TextBox HorizontalAlignment="Left" Height="33" Margin="230,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" FontFamily="Arial" FontSize="20"/>
-                <Label Content="Dicke [mm]:" Margin="0,153,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
-                <TextBox HorizontalAlignment="Left" Height="33" Margin="230,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" RenderTransformOrigin="0.444,2.03" FontFamily="Arial" FontSize="20"/>
-                <Label Content="Zahnradparameter:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="43" Width="284" FontFamily="Arial" FontSize="22" FontWeight="Bold"/>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="183*"/>
+                    <ColumnDefinition Width="13*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="57*"/>
+                    <RowDefinition Height="151*"/>
+                </Grid.RowDefinitions>
+                <Image HorizontalAlignment="Left" Margin="70,48,0,0" Width="119" Source="/Bilder/Kegelrad.PNG" RenderTransformOrigin="-1.075,0.14" Height="140" VerticalAlignment="Top" Grid.RowSpan="2"/>
+                <RadioButton x:Name="rb_Kegelzahnrad" Content="Kegelzahnrad" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="18" Margin="47,10,0,0"/>
+                <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="244" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
             </Grid>
-            <Grid HorizontalAlignment="Left" Height="464" Margin="660,170,0,0" VerticalAlignment="Top" Width="516">
+            <Grid HorizontalAlignment="Left" Height="193" Margin="262,261,0,0" VerticalAlignment="Top" Width="244">
                 <Grid.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="White"/>
-                        <GradientStop Color="#FF646464" Offset="1"/>
-                        <GradientStop Color="#FF666666" Offset="1"/>
+                        <GradientStop Color="#FF898989" Offset="0.257"/>
+                        <GradientStop Color="White" Offset="1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <Grid HorizontalAlignment="Left" Height="193" Margin="10,63,0,0" VerticalAlignment="Top" Width="244">
-                    <Grid.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF8B8B8B" Offset="0.238"/>
-                            <GradientStop Color="White" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Grid.Background>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="82*"/>
-                        <ColumnDefinition Width="35*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="34*"/>
-                        <RowDefinition Height="27*"/>
-                    </Grid.RowDefinitions>
-                    <RadioButton Content="Stirnzahnrad" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" FontFamily="Arial" FontSize="18" Margin="60,10,0,0"/>
-                    <Image HorizontalAlignment="Left" Height="126" Margin="60,57,0,0" VerticalAlignment="Top" Width="127" Source="/Bilder/Stirnrad.PNG" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="244" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-                </Grid>
-                <Label Content="Wähle ein Zahnradtyp:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="260" FontSize="22" FontFamily="Arial" FontWeight="Bold"/>
-                <Grid HorizontalAlignment="Left" Height="193" Margin="262,63,0,0" VerticalAlignment="Top" Width="244">
-                    <Grid.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF878787" Offset="0.235"/>
-                            <GradientStop Color="White" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Grid.Background>
-                    <Image Height="132" Margin="60,51,0,0" VerticalAlignment="Top" Source="/Bilder/Stirnrad SV.PNG" HorizontalAlignment="Left" Width="133"/>
-                    <RadioButton Content="Stirnrad schrägverzahnt" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18" Height="27" Width="234"/>
-                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="244"/>
-                </Grid>
-                <Grid HorizontalAlignment="Left" Height="193" Margin="10,261,0,0" VerticalAlignment="Top" Width="244">
-                    <Grid.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                            <GradientStop Color="Gray" Offset="0.254"/>
-                            <GradientStop Color="White" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Grid.Background>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="183*"/>
-                        <ColumnDefinition Width="13*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="57*"/>
-                        <RowDefinition Height="151*"/>
-                    </Grid.RowDefinitions>
-                    <Image HorizontalAlignment="Left" Margin="70,48,0,0" Width="119" Source="/Bilder/Kegelrad.PNG" RenderTransformOrigin="-1.075,0.14" Height="140" VerticalAlignment="Top" Grid.RowSpan="2"/>
-                    <RadioButton Content="Kegelzahnrad" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="18" Margin="47,10,0,0"/>
-                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="244" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-                </Grid>
-                <Grid HorizontalAlignment="Left" Height="193" Margin="262,261,0,0" VerticalAlignment="Top" Width="244">
-                    <Grid.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF898989" Offset="0.257"/>
-                            <GradientStop Color="White" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Grid.Background>
-                    <Image HorizontalAlignment="Left" Height="134" Margin="59,49,0,0" VerticalAlignment="Top" Width="131" Source="/Bilder/Innenrad.PNG"/>
-                    <RadioButton Content="Innenzahnrad" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="18" Margin="49,10,0,0"/>
-                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="244"/>
-                </Grid>
+                <Image HorizontalAlignment="Left" Height="134" Margin="59,49,0,0" VerticalAlignment="Top" Width="131" Source="/Bilder/Innenrad.PNG"/>
+                <RadioButton x:Name="rb_Innenzahnrad" Content="Innenzahnrad" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="18" Margin="49,10,0,0"/>
+                <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="244"/>
             </Grid>
-            <Label Content="Zahnrad Zar GmbH und Co. KG" HorizontalAlignment="Center" Margin="240,32,286,0" VerticalAlignment="Top" Height="83" Width="968" FontSize="72" FontWeight="Bold" FontFamily="CabinSketch"/>
-            <Grid HorizontalAlignment="Left" Height="146" Margin="297,569,0,0" VerticalAlignment="Top" Width="335">
-                <Grid.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="White" Offset="0"/>
-                        <GradientStop Color="#FF7A7A7A" Offset="0.898"/>
-                    </LinearGradientBrush>
-                </Grid.Background>
-                <Label Content="Wähle ein Kopfspiel:" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" FontWeight="Bold"/>
-                <RadioButton Content="Standardkopfspiel 0,167 DIN 867" HorizontalAlignment="Left" Margin="10,40,-10,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
-                <RadioButton Content="Kopfspiel 0,1 DIN 867" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
-                <RadioButton Content="Kopfspiel 0,3 DIN 867" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
-            </Grid>
-            <Grid HorizontalAlignment="Left" Height="142" Margin="297,403,0,0" VerticalAlignment="Top" Width="335">
-                <Grid.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="White" Offset="0"/>
-                        <GradientStop Color="#FF7A7A7A" Offset="0.905"/>
-                    </LinearGradientBrush>
-                </Grid.Background>
-                <Label HorizontalAlignment="Left"  VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Width="225" FontWeight="Bold" Content="Wähle ein Werkstoff:" />
-                <RadioButton Content="EN-GJL-200" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
-                <RadioButton Content="EN-GJL-350" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
-                <RadioButton Content="S235JR" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Height="23" Width="107"/>
-            </Grid>
-            <Grid Height="543" Margin="1208,172,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="250">
-                <Grid.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="White" Offset="0"/>
-                        <GradientStop Color="#FF7A7A7A" Offset="0.965"/>
-                    </LinearGradientBrush>
-                </Grid.Background>
-                <Label Content="Ihr individuelles Zahnrad:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="240" FontFamily="Arial" FontSize="20"/>
-            </Grid>
-            <Grid HorizontalAlignment="Left" Height="65" Margin="675,650,0,0" VerticalAlignment="Top" Width="478">
-                <Grid.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="White" Offset="0"/>
-                        <GradientStop Color="#FF787878" Offset="0.93"/>
-                    </LinearGradientBrush>
-                </Grid.Background>
-                <Button Content="Zurücksetzen" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="220" Height="45" FontFamily="Arial" FontSize="20" Background="#FFFF9F9F" FontWeight="Bold" FontStyle="Italic"/>
-                <Button Content="Bestätigen" HorizontalAlignment="Left" Margin="249,10,0,0" VerticalAlignment="Top" Width="219" Height="45" FontFamily="Arial" FontSize="20" Background="#FFD2FFBD" FontWeight="Bold" FontStyle="Italic"/>
-            </Grid>
-        <Image x:Name="Im_Firmenlogo" Source="/Bilder/Firmenname.png"  HorizontalAlignment="Left" Height="38" Margin="340,10,0,0" VerticalAlignment="Top" Width="504"/>
+        </Grid>
+        <Label Content="Zahnrad Zar GmbH und Co. KG" HorizontalAlignment="Center" Margin="240,32,286,0" VerticalAlignment="Top" Height="83" Width="968" FontSize="72" FontWeight="Bold" FontFamily="CabinSketch"/>
+        <Grid HorizontalAlignment="Left" Height="146" Margin="297,569,0,0" VerticalAlignment="Top" Width="335">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FF7A7A7A" Offset="0.898"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Label Content="Wähle ein Kopfspiel:" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" FontWeight="Bold" Margin="5,5,0,0"/>
+            <RadioButton x:Name="rb_standardkopfspiel" Content="Standardkopfspiel 0,167 DIN 867" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+            <RadioButton x:Name="rb_01" Content="Kopfspiel 0,1 DIN 867" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+            <RadioButton x:Name="rb_03" Content="Kopfspiel 0,3 DIN 867" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="142" Margin="297,403,0,0" VerticalAlignment="Top" Width="335">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FF7A7A7A" Offset="0.905"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Label HorizontalAlignment="Left"  VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Width="225" FontWeight="Bold" Content="Wähle ein Werkstoff:" Margin="5,5,0,0" />
+            <RadioButton x:Name="rb_gjl200" Content="EN-GJL-200" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+            <RadioButton x:Name="rb_gjl350" Content="EN-GJL-350" HorizontalAlignment="Left" Margin="10,79,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+            <RadioButton x:Name="rb_s235jr" Content="S235JR" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18" Height="23" Width="107"/>
+        </Grid>
+        <Grid Height="543" Margin="1208,172,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="260">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FF7A7A7A" Offset="0.965"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Label Content="Ihr individuelles Zahnrad:" VerticalAlignment="Top" Height="38" FontFamily="Arial" FontSize="20" FontWeight="Bold" Margin="3,5,-3,0"/>
+            <Label x:Name="lbl_Zahnradtyp" Margin="0,91,0,0" VerticalAlignment="Top" Height="116"/>
+            <Label Content="- Ihr gewähltes Modul:" Margin="0,219,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+            <Label Content="- Ihr gewählter Zahnradtyp:" Margin="0,58,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+            <Label Content="- Zahnhöhe:" Margin="0,439,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+            <Label Content="- Masse:" Margin="0,472,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+            <Label Content="- Preis:" Margin="0,505,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+            <Label Content="- Fußkreisdurchmesser:" Margin="0,406,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial"/>
+            <Label Content="- Teilkreisdurchmesser:" Margin="0,373,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial"/>
+            <Label Content="- Kopfkreisdurchmesser:" Margin="0,340,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+            <Label Content="- Ihre gewählte Zähnezahl:" Margin="0,252,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+            <Label x:Name="lbl_Modul" Margin="203,219,0,0" VerticalAlignment="Top" FontSize="16" Height="28"/>
+            <Label x:Name="lbl_Zähnezahl" Margin="203,252,0,0" VerticalAlignment="Top" FontSize="16" Height="28"/>
+            <Label x:Name="lbl_Fußkreisdurchmesser" Margin="212,406,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" Height="28"/>
+            <Label x:Name="lbl_Kopfkreisdurchmesser" Margin="203,340,0,0" VerticalAlignment="Top" Height="28"/>
+            <Label x:Name="lbl_Zahnhöhe" Margin="212,441,0,0" VerticalAlignment="Top" Height="26"/>
+            <Label x:Name="lbl_Teilkreisdurchmesser" Margin="203,373,0,0" VerticalAlignment="Top" Height="28"/>
+            <Label x:Name="lbl_Masse" Margin="212,474,0,0" VerticalAlignment="Top" Height="26"/>
+            <Label x:Name="lbl_Preis" Margin="212,507,0,0" VerticalAlignment="Top" Height="26"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="65" Margin="660,650,0,0" VerticalAlignment="Top" Width="516">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FF787878" Offset="0.93"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Button x:Name="btn_Zurücksetzen" Content="Zurücksetzen" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="220" Height="45" FontFamily="Arial" FontSize="20" Background="#FFFF9F9F" FontWeight="Bold" FontStyle="Italic"/>
+            <Button x:Name="btn_Bestätigen" Content="Bestätigen" HorizontalAlignment="Left" Margin="287,10,0,0" VerticalAlignment="Top" Width="219" Height="45" FontFamily="Arial" FontSize="20" Background="#FFD2FFBD" FontWeight="Bold" FontStyle="Italic"/>
+        </Grid>
         <Label x:Name="lb_Teilkreisdurchmesser" Content="" HorizontalAlignment="Left" Margin="223,277,0,0" VerticalAlignment="Top"/>
 
 
