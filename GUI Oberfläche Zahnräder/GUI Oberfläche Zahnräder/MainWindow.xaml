@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GUI_Oberfläche_Zahnräder"
         mc:Ignorable="d"
 
-    Title="Zahnradprogrammierung" Height="800" Width="1500">
+    Title="Zahnradprogrammierung" Height="800" Width="1500" ResizeMode="NoResize">
     <Grid>
         <Grid Margin="0,150,10,0" VerticalAlignment="Top" HorizontalAlignment="Left">
             <Image Source="/Bilder/Zahnräder.jpg" VerticalAlignment="Top" HorizontalAlignment="Left" Opacity="0.4" Margin="10,0,0,0" Height="591"/>
@@ -145,7 +145,7 @@
         </Grid>
         <Image x:Name="Im_Firmenlogo" Source="/Bilder/Firmenname.png"  HorizontalAlignment="Left" Height="38" Margin="340,10,0,0" VerticalAlignment="Top" Width="504"/>
         <Label x:Name="lb_Teilkreisdurchmesser" Content="" HorizontalAlignment="Left" Margin="223,277,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lb_Geschäftsführer" Content="Geschäftsführer Kai Mecke" HorizontalAlignment="Right" Margin="0,0,1314.6,636.4" VerticalAlignment="Bottom"/>
+        <Label x:Name="lb_Geschäftsführer" Content="Geschäftsführer Kai Mecke" HorizontalAlignment="Right" Margin="0,0,1293.6,636.4" VerticalAlignment="Bottom" FontSize="14"/>
 
 
     </Grid>
