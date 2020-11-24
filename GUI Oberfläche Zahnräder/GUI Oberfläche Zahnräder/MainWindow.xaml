@@ -11,9 +11,6 @@
         <Grid Margin="0,150,10,0" VerticalAlignment="Top" HorizontalAlignment="Left">
             <Image Source="/Bilder/Zahnräder.jpg" VerticalAlignment="Top" HorizontalAlignment="Left" Opacity="0.4" Margin="10,0,0,0" Height="591"/>
         </Grid>
-        <TreeView x:Name="Baum_Zahnräder" HorizontalAlignment="Left" Height="176" Margin="28,172,0,0" VerticalAlignment="Top" Width="252" RenderTransformOrigin="0.546,0.506" BorderBrush="Black" FontFamily="Arial" FontSize="16" Background="#FFE6E6E6">
-            <Grid/>
-        </TreeView>
 
         <Image HorizontalAlignment="Right" Height="124" Margin="0,10,10,0" VerticalAlignment="Top" Width="276" Source="/Bilder/Jade Hochschule Logo.jpg"/>
             <Image Source="/Bilder/Firma.png" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="167"/>
