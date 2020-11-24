@@ -27,18 +27,10 @@ namespace GUI_Oberfläche_Zahnräder
             
         }
 
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void rtb_Gerad_Checked(object sender, RoutedEventArgs e)
         {
-
+           
         }
-
-      
-
-       
-
-        
-
     }
    
 
