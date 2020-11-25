@@ -25,22 +25,15 @@
                 <Label x:Name="lb_Zahnkopfhöhe" Content="Zahnkopfhöhe" HorizontalAlignment="Left" Margin="10,174,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
                 <Label x:Name="lb_Zahnfußhöhe" Content="Zahnfußhöhe" HorizontalAlignment="Left" Margin="10,206,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
                 <Label Content="Unsere Ausgabeparameter:" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top" Width="247" FontFamily="Calibri" FontSize="20" FontWeight="Bold"/>
-                <Label x:Name="lb_Teilkreis1" Content="" Margin="254,43,17,0" VerticalAlignment="Top" RenderTransformOrigin="0.486,0.536" Height="23">
-                    <Label.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-0.302"/>
-                            <TranslateTransform X="-0.02" Y="-0.104"/>
-                        </TransformGroup>
-                    </Label.RenderTransform>
-                </Label>
-                <Label x:Name="lb_Fußhöhe" Content="" HorizontalAlignment="Left" Margin="268,73,0,0" VerticalAlignment="Top" Width="29" Height="19"/>
-                <Label x:Name="lb_Teilung1" Content="" HorizontalAlignment="Left" Margin="268,97,0,0" VerticalAlignment="Top" Width="39"/>
-                <Label x:Name="lb_Preis1" Content="" HorizontalAlignment="Left" Margin="268,204,0,0" VerticalAlignment="Top"/>
-                <Label x:Name="lb_Kopfhöhe" Content="" HorizontalAlignment="Left" Margin="268,123,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.492"/>
-                <Label x:Name="lb_Gewicht1" Content="" HorizontalAlignment="Left" Margin="268,180,0,0" VerticalAlignment="Top"/>
                 <Label Content="Kopfkreisdurchmesser:" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Width="132"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="197,40,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="197,78,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="197,123,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="197,151,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="197,178,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="197,210,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="197,238,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="197,266,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
             </Grid>
         </Grid>
 

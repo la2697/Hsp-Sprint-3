@@ -80,19 +80,29 @@ namespace GUI_Oberfläche_Zahnräder
 
 
 
-            if (rtb_EN_GJL.IsChecked == true && rtb_Gerad.IsChecked == true)
+            if (rtb_EN_GJL.IsChecked == true || rtb_EN_GJS.IsChecked == true || rtb_S235JR.IsChecked == true)
 
             {
                 //Berechnung Teilkreisdurchmesser d
                 try
                 {
-                    lb_Teilkreis1.Content = (float.Parse(txt_Modul.Text) * float.Parse(txt_Zähnezahl.Text)).ToString();
+                    .Content = (float.Parse(txt_Modul.Text) * float.Parse(txt_Zähnezahl.Text)).ToString();
                 }
                 catch
                 {
 
                 }
-            }
+
+                //Berechnung Kopfkreisdurchmesser da
+                try
+                {
+                    
+                }
+                catch
+                {
+
+                }
+            } 
 
 
 
