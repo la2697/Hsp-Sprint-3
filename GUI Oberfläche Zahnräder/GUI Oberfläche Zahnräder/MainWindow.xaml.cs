@@ -86,7 +86,7 @@ namespace GUI_Oberfläche_Zahnräder
                 //Berechnung Teilkreisdurchmesser d
                 try
                 {
-                    .Content = (float.Parse(txt_Modul.Text) * float.Parse(txt_Zähnezahl.Text)).ToString();
+                    tb_Teilkreisdurchmesser.Text = (float.Parse(txt_Modul.Text) * float.Parse(txt_Zähnezahl.Text)).ToString();
                 }
                 catch
                 {
@@ -96,16 +96,122 @@ namespace GUI_Oberfläche_Zahnräder
                 //Berechnung Kopfkreisdurchmesser da
                 try
                 {
-                    
+                    tb_Kopfkreisdurchmesser.Text = (float.Parse(tb_Teilkreisdurchmesser.Text) + (2 * float.Parse(txt_Modul.Text))).ToString();
                 }
                 catch
                 {
 
                 }
+
+                //Berechnung Fußkreisdurchmesser df
+                try
+                {
+                    tb_Fußkreisdurchmesser.Text = (float.Parse(tb_Teilkreisdurchmesser.Text) - (2 * (float.Parse(txt_Modul.Text)+c))).ToString();
+                }
+                catch
+                {
+
+                }
+
+                //Berechnung Teilung p
+                try
+                {
+                    tb_Teilung.Text = (Pi * (float.Parse(txt_Modul.Text))).ToString();
+                }
+                catch
+                {
+
+                }
+
+                //Berechnung Zahnkopfhöhe ha
+                try
+                {
+                    tb_Zahnkopfhöhe.Text = (txt_Modul.Text).ToString();
+                }
+                catch
+                {
+
+                }
+
+                //Berechnung Zahnfußhöhe hf
+                try
+                {
+                    tb_Zahnfußhöhe.Text = (float.Parse(txt_Modul.Text) + c).ToString();
+                }
+                catch
+                {
+
+                }
+
             } 
 
+            if (rtb_EN_GJL.IsChecked == true)
+            {
+                try
+                {
+                    tb_Gewicht.Text = (dGJL * (float.Parse(txt_Dicke.Text) * ((float.Parse(tb_Teilkreisdurchmesser.Text) * (float.Parse(tb_Teilkreisdurchmesser.Text) * Pi)))) / 4).ToString();
+                }
+                catch
+                {
 
+                }
 
+                //Berechnung Preis
+                try
+                {
+                    tb_Preis.Text = (float.Parse(tb_Gewicht.Text) * PrdGjl).ToString();
+                }
+                catch
+                {
+
+                }
+
+            }
+            else if (rtb_EN_GJS.IsChecked == true)
+            {
+                try
+                {
+                    tb_Gewicht.Text = (dGJS * (float.Parse(txt_Dicke.Text) * ((float.Parse(tb_Teilkreisdurchmesser.Text) * (float.Parse(tb_Teilkreisdurchmesser.Text) * Pi)))) / 4).ToString();
+                }
+                catch
+                {
+
+                }
+
+                //Berechnung Preis
+                try
+                {
+                    tb_Preis.Text = (float.Parse(tb_Gewicht.Text) * PrGjs).ToString();
+                }
+                catch
+                {
+
+                }
+
+            }
+
+            else if (rtb_S235JR.IsChecked == true)
+            {
+                try
+                {
+                    tb_Gewicht.Text = (S235JR * (float.Parse(txt_Dicke.Text) * ((float.Parse(tb_Teilkreisdurchmesser.Text) * (float.Parse(tb_Teilkreisdurchmesser.Text) * Pi)))) / 4).ToString();
+                }
+                catch
+                {
+
+                }
+
+                //Berechnung Preis
+                try
+                {
+                    tb_Preis.Text = (float.Parse(tb_Gewicht.Text) * PrS235).ToString();
+                }
+                catch
+                {
+
+                }
+
+            }
 
 
         }

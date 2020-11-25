@@ -26,14 +26,14 @@
                 <Label x:Name="lb_Zahnfußhöhe" Content="Zahnfußhöhe" HorizontalAlignment="Left" Margin="10,206,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
                 <Label Content="Unsere Ausgabeparameter:" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top" Width="247" FontFamily="Calibri" FontSize="20" FontWeight="Bold"/>
                 <Label Content="Kopfkreisdurchmesser:" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Width="132"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="197,40,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="197,78,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="197,123,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="197,151,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="197,178,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="197,210,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="197,238,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="197,266,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="tb_Teilkreisdurchmesser" HorizontalAlignment="Left" Height="23" Margin="197,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="tb_Kopfkreisdurchmesser" HorizontalAlignment="Left" Height="23" Margin="197,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="tb_Fußkreisdurchmesser" HorizontalAlignment="Left" Height="23" Margin="197,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="tb_Teilung" HorizontalAlignment="Left" Height="23" Margin="197,151,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="tb_Zahnkopfhöhe" HorizontalAlignment="Left" Height="23" Margin="197,178,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="tb_Zahnfußhöhe" HorizontalAlignment="Left" Height="23" Margin="197,210,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="tb_Gewicht" HorizontalAlignment="Left" Height="23" Margin="197,238,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="tb_Preis" HorizontalAlignment="Left" Height="23" Margin="197,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
             </Grid>
         </Grid>
 
