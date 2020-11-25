@@ -10,22 +10,22 @@
     <Grid>
         <Grid Margin="0,150,10,0" VerticalAlignment="Top" HorizontalAlignment="Left">
             <Image Source="/Bilder/Zahnräder.jpg" VerticalAlignment="Top" HorizontalAlignment="Left" Opacity="0.4" Margin="10,0,0,0" Height="591"/>
-            <Grid HorizontalAlignment="Left" Height="283" Margin="1116,288,0,0" VerticalAlignment="Top" Width="327">
+            <Grid HorizontalAlignment="Left" Height="307" Margin="1116,264,0,0" VerticalAlignment="Top" Width="327">
                 <Grid.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="White" Offset="0"/>
                         <GradientStop Color="#FF7E7E7E" Offset="1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <Label x:Name="lb_Preis" Content="Preis" HorizontalAlignment="Left" Margin="10,204,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
-                <Label x:Name="lb_Gewicht" Content="Gewicht" HorizontalAlignment="Left" Margin="10,178,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
-                <Label x:Name="lb_Grundkreis" Content="Grundkreisdurchmesser" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.513,0.086" FontFamily="Calibri" FontSize="14"/>
-                <Label x:Name="lb_Fußkreisdurchmesser" Content="Fußkreisdurchmesser" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
-                <Label x:Name="lb_Teilung" Content="Teilung" HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.704,1.152" FontFamily="Calibri" FontSize="14"/>
-                <Label x:Name="lb_Zahnkopfhöhe" Content="Zahnkopfhöhe" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
-                <Label x:Name="lb_Zahnfußhöhe" Content="Zahnfußhöhe" HorizontalAlignment="Left" Margin="10,149,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
+                <Label x:Name="lb_Preis" Content="Preis" HorizontalAlignment="Left" Margin="10,270,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
+                <Label x:Name="lb_Gewicht" Content="Gewicht" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
+                <Label x:Name="lb_Teilkreis" Content="Teilkreisdurchmesser" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.513,0.086" FontFamily="Calibri" FontSize="14"/>
+                <Label x:Name="lb_Fußkreisdurchmesser" Content="Fußkreisdurchmesser" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
+                <Label x:Name="lb_Teilung" Content="Teilung" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.704,1.152" FontFamily="Calibri" FontSize="14"/>
+                <Label x:Name="lb_Zahnkopfhöhe" Content="Zahnkopfhöhe" HorizontalAlignment="Left" Margin="10,174,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
+                <Label x:Name="lb_Zahnfußhöhe" Content="Zahnfußhöhe" HorizontalAlignment="Left" Margin="10,206,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
                 <Label Content="Unsere Ausgabeparameter:" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top" Width="247" FontFamily="Calibri" FontSize="20" FontWeight="Bold"/>
-                <Label x:Name="lb_Grundkreis1" Content="" Margin="254,43,17,0" VerticalAlignment="Top" RenderTransformOrigin="0.486,0.536" Height="23">
+                <Label x:Name="lb_Teilkreis1" Content="" Margin="254,43,17,0" VerticalAlignment="Top" RenderTransformOrigin="0.486,0.536" Height="23">
                     <Label.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -40,6 +40,7 @@
                 <Label x:Name="lb_Preis1" Content="" HorizontalAlignment="Left" Margin="268,204,0,0" VerticalAlignment="Top"/>
                 <Label x:Name="lb_Kopfhöhe" Content="" HorizontalAlignment="Left" Margin="268,123,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.492"/>
                 <Label x:Name="lb_Gewicht1" Content="" HorizontalAlignment="Left" Margin="268,180,0,0" VerticalAlignment="Top"/>
+                <Label Content="Kopfkreisdurchmesser:" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Width="132"/>
             </Grid>
         </Grid>
 
@@ -179,15 +180,15 @@
 
 
             <Label x:Name="lb_Kopfspiele" Content="Kopfspiel:" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="93" FontFamily="Calibri" FontSize="14"/>
-            <Label x:Name="lb_Kopfspiele1" Content="" HorizontalAlignment="Left" Margin="280,94,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Kopfspiele1" Content="" Margin="248,94,10,0" VerticalAlignment="Top"/>
             <Label Content="Modul:" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Width="93" FontFamily="Calibri" FontSize="14"/>
             <Label Content="Zähnezahl:" HorizontalAlignment="Left" Margin="10,156,0,0" VerticalAlignment="Top" Width="93" FontFamily="Calibri" FontSize="14"/>
-            <Label Content="Dicke [mm]:" HorizontalAlignment="Left" Margin="10,182,0,0" VerticalAlignment="Top" Width="93" FontFamily="Calibri" FontSize="14"/>
-            <Label x:Name="lb_Dicke1" Content="" HorizontalAlignment="Left" Margin="280,182,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lb_Zähne" Content="" HorizontalAlignment="Left" Margin="280,156,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lb_Modul2" Content="" HorizontalAlignment="Left" Margin="280,125,0,0" VerticalAlignment="Top"/>
+            <Label Content="Dicke [mm]:" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Width="93" FontFamily="Calibri" FontSize="14"/>
+            <Label x:Name="lb_Dicke1" Content="" Margin="248,190,10,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Zähne" Content="" Margin="248,156,10,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Modul2" Content="" Margin="248,125,10,0" VerticalAlignment="Top"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="65" Margin="463,648,0,0" VerticalAlignment="Top" Width="478">
+        <Grid HorizontalAlignment="Left" Height="65" Margin="523,650,0,0" VerticalAlignment="Top" Width="478">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="White" Offset="0"/>
