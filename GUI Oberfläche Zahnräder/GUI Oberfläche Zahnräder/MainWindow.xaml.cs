@@ -39,21 +39,7 @@ namespace GUI_Oberfläche_Zahnräder
 
         }
 
-        private void txt_Fußhöhe_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void txt_Kopfhöhe_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void rtb_Gerad_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+        
         private void btn_Bestätigen_Click(object sender, RoutedEventArgs e)
         {
             if (rtb_EN_GJL.IsChecked == true)
@@ -67,6 +53,19 @@ namespace GUI_Oberfläche_Zahnräder
             else if (rtb_S235JR.IsChecked == true)
             {
                 lb_Werkstoffwahl.Content = "S235JR";
+            }
+
+            if(rtb_0_1.IsChecked == true)
+            {
+                lb_Kopfspiele1.Content = "0,1";
+            }
+            else if(rtb_0_3.IsChecked == true)
+            {
+                lb_Kopfspiele1.Content = "0,3";
+            }
+            else if(rtb_Standard.IsChecked == true)
+            {
+                lb_Kopfspiele1.Content = "0,167";
             }
 
 
