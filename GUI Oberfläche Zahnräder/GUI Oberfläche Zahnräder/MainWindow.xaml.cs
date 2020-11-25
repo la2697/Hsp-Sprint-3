@@ -27,10 +27,9 @@ namespace GUI_Oberfläche_Zahnräder
             
         }
 
-        private void rtb_Gerad_Checked(object sender, RoutedEventArgs e)
-        {
-           
-        }
+       
+
+       
     }
    
 
