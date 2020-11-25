@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GUI_Oberfläche_Zahnräder"
         mc:Ignorable="d"
 
-    Title="Zahnradprogrammierung" Height="800" Width="1500" ResizeMode="NoResize">
+    Title="Zahnradprogrammierung" Height="800" Width="1500" ResizeMode="CanResize">
     <Grid>
         <Grid Margin="0,150,10,0" VerticalAlignment="Top" HorizontalAlignment="Left">
             <Image Source="/Bilder/Zahnräder.jpg" VerticalAlignment="Top" HorizontalAlignment="Left" Opacity="0.4" Margin="10,0,0,0" Height="591"/>
@@ -52,7 +52,7 @@
                     <RowDefinition Height="34*"/>
                     <RowDefinition Height="27*"/>
                 </Grid.RowDefinitions>
-                <RadioButton GroupName="Wähle ein Zahnrad" x:Name="rtb_Gerad" Content="Stirnzahnrad" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" FontFamily="Arial" FontSize="18" Margin="60,10,0,0"/>
+                <RadioButton GroupName="Wähle ein Zahnrad" x:Name="rtb_Gerad" Content="Stirnzahnrad" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" FontFamily="Arial" FontSize="18" Margin="60,10,0,0" Checked="rtb_Gerad_Checked"/>
                 <Image x:Name="Im_Gerad" HorizontalAlignment="Left" Height="126" Margin="60,57,0,0" VerticalAlignment="Top" Width="127" Source="/Bilder/Stirnrad.PNG" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
                 <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="244" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
             </Grid>
@@ -99,7 +99,7 @@
                 <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="244"/>
             </Grid>
         </Grid>
-        <Label Content="Zahnrad Zar GmbH und Co. KG" HorizontalAlignment="Center" Margin="240,32,286,0" VerticalAlignment="Top" Height="83" Width="968" FontSize="72" FontWeight="Bold" FontFamily="CabinSketch"/>
+        <Label Content="Zahnrad Zar GmbH und Co. KG" HorizontalAlignment="Center" Margin="240,32,286,0" VerticalAlignment="Top" Height="83" Width="968" FontSize="48" FontWeight="Bold" FontFamily="CabinSketch"/>
         <Grid HorizontalAlignment="Left" Height="146" Margin="26,569,0,0" VerticalAlignment="Top" Width="335">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -108,9 +108,9 @@
                 </LinearGradientBrush>
             </Grid.Background>
             <Label Content="Wähle ein Kopfspiel:" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" FontWeight="Bold"/>
-            <RadioButton x:Name="rtb_Standard" Content="Standardkopfspiel 0,167 DIN 867" HorizontalAlignment="Left" Margin="10,40,-10,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" />
-            <RadioButton x:Name="rtb_0_1" Content="Kopfspiel 0,1 DIN 867" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
-            <RadioButton x:Name="rtb_0_3" Content="Kopfspiel 0,3 DIN 867" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
+            <RadioButton GroupName="Kopfspiel" x:Name="rtb_Standard" Content="Standardkopfspiel 0,167 DIN 867" HorizontalAlignment="Left" Margin="10,40,-10,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" />
+            <RadioButton GroupName="Kopfspiel" x:Name="rtb_0_1" Content="Kopfspiel 0,1 DIN 867" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
+            <RadioButton GroupName="Kopfspiel" x:Name="rtb_0_3" Content="Kopfspiel 0,3 DIN 867" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="142" Margin="26,403,0,0" VerticalAlignment="Top" Width="335">
             <Grid.Background>
@@ -120,9 +120,9 @@
                 </LinearGradientBrush>
             </Grid.Background>
             <Label HorizontalAlignment="Left"  VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Width="225" FontWeight="Bold" Content="Wähle ein Werkstoff:" />
-            <RadioButton x:Name="rtb_EN_GJL" Content="EN-GJL-200" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" />
-            <RadioButton x:Name="rtb_EN_GJS" Content="EN-GJS-350" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" />
-            <RadioButton x:Name="rtb_S235JR" Content="S235JR" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Height="23" Width="107"/>
+            <RadioButton GroupName="Werkstoff"  x:Name="rtb_EN_GJL" Content="EN-GJL-200" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" />
+            <RadioButton GroupName="Werkstoff" x:Name="rtb_EN_GJS" Content="EN-GJS-350" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" />
+            <RadioButton GroupName="Werkstoff" x:Name="rtb_S235JR" Content="S235JR" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Height="23" Width="107"/>
         </Grid>
         <Grid Height="543" Margin="1093,170,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="250">
             <Grid.Background>
@@ -132,20 +132,24 @@
                 </LinearGradientBrush>
             </Grid.Background>
             <Label Content="Ihr individuelles Zahnrad:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="240" FontFamily="Arial" FontSize="20"/>
-            <Label x:Name="lb_Zahnfußhöhe" Content="Zahnfußhöhe" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Fußhöhe" HorizontalAlignment="Left" Height="23" Margin="120,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label x:Name="lb_Zahnkopfhöhe" Content="Zahnkopfhöhe" HorizontalAlignment="Left" Margin="10,163,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Kopfhöhe" HorizontalAlignment="Left" Height="23" Margin="120,167,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label x:Name="lb_Teilung" Content="Teilung" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Teilung" HorizontalAlignment="Left" Height="23" Margin="120,235,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label x:Name="lb_Fußkreisdurchmesser" Content="Fußkreisdurchmesser" HorizontalAlignment="Left" Margin="10,300,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lb_Grundkreis" Content="Grundkreisdurchmesser" HorizontalAlignment="Left" Margin="10,379,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lb_Gewicht" Content="Gewicht" HorizontalAlignment="Left" Margin="10,441,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lb_Preis" Content="Preis" HorizontalAlignment="Left" Margin="10,507,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Fußkreis" HorizontalAlignment="Left" Height="23" Margin="136,303,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="104"/>
-            <TextBox x:Name="txt_Grundkreis" HorizontalAlignment="Left" Height="23" Margin="149,379,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="91"/>
-            <TextBox x:Name="txt_Gewicht" HorizontalAlignment="Left" Height="23" Margin="120,444,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txt_Preis" HorizontalAlignment="Left" Height="23" Margin="120,510,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="lb_Zahnfußhöhe" Content="Zahnfußhöhe" HorizontalAlignment="Left" Margin="10,161,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Zahnkopfhöhe" Content="Zahnkopfhöhe" HorizontalAlignment="Left" Margin="10,201,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Teilung" Content="Teilung" HorizontalAlignment="Left" Margin="10,240,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.704,1.152"/>
+            <Label x:Name="lb_Fußkreisdurchmesser" Content="Fußkreisdurchmesser" HorizontalAlignment="Left" Margin="10,285,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Grundkreis" Content="Grundkreisdurchmesser" HorizontalAlignment="Left" Margin="10,323,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Gewicht" Content="Gewicht" HorizontalAlignment="Left" Margin="10,361,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Preis" Content="Preis" HorizontalAlignment="Left" Margin="10,401,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Werkstoff" Content="Werkstoff" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Werkstoffwahl" Content="" HorizontalAlignment="Left" Margin="149,50,0,0" VerticalAlignment="Top" Width="91"/>
+            <Label x:Name="lb_Fußhöhe" Content="" HorizontalAlignment="Left" Margin="182,94,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Kopfhöhe" Content="" HorizontalAlignment="Left" Margin="182,145,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Teilung1" Content="" HorizontalAlignment="Left" Margin="182,193,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Fußkreis" Content="" HorizontalAlignment="Left" Margin="182,232,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Grundkreis1" Content="" HorizontalAlignment="Left" Margin="182,277,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.13,0.68"/>
+            <Label x:Name="lb_Gewicht1" Content="" HorizontalAlignment="Left" Margin="182,323,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Preis1" Content="" HorizontalAlignment="Left" Margin="182,361,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Kopfspiele" Content="Kopfspiel" HorizontalAlignment="Left" Margin="10,127,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Kopfspiele1" Content="" HorizontalAlignment="Left" Margin="166,68,0,0" VerticalAlignment="Top"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="65" Margin="463,648,0,0" VerticalAlignment="Top" Width="478">
             <Grid.Background>
@@ -155,11 +159,10 @@
                 </LinearGradientBrush>
             </Grid.Background>
             <Button x:Name="btn_Zurück" Content="Zurücksetzen" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="220" Height="45" FontFamily="Arial" FontSize="20" Background="#FFFF9F9F" FontWeight="Bold" FontStyle="Italic"/>
-            <Button x:Name="btn_Bestätigen" Content="Bestätigen" HorizontalAlignment="Left" Margin="249,10,0,0" VerticalAlignment="Top" Width="219" Height="45" FontFamily="Arial" FontSize="20" Background="#FFD2FFBD" FontWeight="Bold" FontStyle="Italic"/>
+            <Button Click="btn_Bestätigen_Click" x:Name="btn_Bestätigen" Content="Bestätigen" HorizontalAlignment="Left" Margin="249,10,0,0" VerticalAlignment="Top" Width="219" Height="45" FontFamily="Arial" FontSize="20" Background="#FFD2FFBD" FontWeight="Bold" FontStyle="Italic"/>
         </Grid>
-        <Image x:Name="Im_Firmenlogo" Source="/Bilder/Firmenname.png"  HorizontalAlignment="Left" Height="38" Margin="340,10,0,0" VerticalAlignment="Top" Width="504"/>
         <Label x:Name="lb_Teilkreisdurchmesser" Content="" HorizontalAlignment="Left" Margin="223,277,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lb_Geschäftsführer" Content="Geschäftsführer Kai Mecke" HorizontalAlignment="Right" Margin="0,0,1293.6,636.4" VerticalAlignment="Bottom" FontSize="14"/>
+        <Label x:Name="lb_Geschäftsführer" Content="Geschäftsführer Kai Mecke" Margin="10,105,1282.6,625.4" FontSize="14"/>
 
 
     </Grid>
