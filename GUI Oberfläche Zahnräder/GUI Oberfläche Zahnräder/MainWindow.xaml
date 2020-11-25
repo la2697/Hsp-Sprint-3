@@ -52,7 +52,7 @@
                     <RowDefinition Height="34*"/>
                     <RowDefinition Height="27*"/>
                 </Grid.RowDefinitions>
-                <RadioButton GroupName="Wähle ein Zahnrad" x:Name="rtb_Gerad" Content="Stirnzahnrad" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" FontFamily="Arial" FontSize="18" Margin="60,10,0,0"/>
+                <RadioButton IsChecked="True" GroupName="Wähle ein Zahnrad" x:Name="rtb_Gerad" Content="Stirnzahnrad" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" FontFamily="Arial" FontSize="18" Margin="60,10,0,0"/>
                 <Image x:Name="Im_Gerad" HorizontalAlignment="Left" Height="126" Margin="60,57,0,0" VerticalAlignment="Top" Width="127" Source="/Bilder/Stirnrad.PNG" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
                 <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="244" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
             </Grid>
