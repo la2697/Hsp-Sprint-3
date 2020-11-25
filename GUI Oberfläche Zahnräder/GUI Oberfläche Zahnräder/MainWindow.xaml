@@ -200,7 +200,6 @@
         </Grid>
         <Label x:Name="lb_Teilkreisdurchmesser" Content="" HorizontalAlignment="Left" Margin="223,277,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lb_Geschäftsführer" Content="Geschäftsführer Kai Mecke" Margin="10,105,1282.6,625.4" FontSize="14"/>
-        <Label Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
 
     </Grid>
