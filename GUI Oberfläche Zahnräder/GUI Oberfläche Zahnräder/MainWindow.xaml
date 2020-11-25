@@ -14,7 +14,7 @@
 
         <Image HorizontalAlignment="Right" Height="124" Margin="0,10,10,0" VerticalAlignment="Top" Width="276" Source="/Bilder/Jade Hochschule Logo.jpg"/>
         <Image Source="/Bilder/Firma.png" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="167"/>
-        <Grid HorizontalAlignment="Left" Height="206" Margin="297,172,0,0" VerticalAlignment="Top" Width="335">
+        <Grid HorizontalAlignment="Left" Height="206" Margin="26,170,0,0" VerticalAlignment="Top" Width="335">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="White"/>
@@ -29,7 +29,7 @@
             <TextBox x:Name="txt_Dicke" HorizontalAlignment="Left" Height="33" Margin="230,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" RenderTransformOrigin="0.444,2.03" FontFamily="Arial" FontSize="20"/>
             <Label Content="Zahnradparameter:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="43" Width="284" FontFamily="Arial" FontSize="22" FontWeight="Bold"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="464" Margin="660,170,0,0" VerticalAlignment="Top" Width="516">
+        <Grid HorizontalAlignment="Left" Height="464" Margin="463,170,0,0" VerticalAlignment="Top" Width="516">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="White"/>
@@ -100,7 +100,7 @@
             </Grid>
         </Grid>
         <Label Content="Zahnrad Zar GmbH und Co. KG" HorizontalAlignment="Center" Margin="240,32,286,0" VerticalAlignment="Top" Height="83" Width="968" FontSize="72" FontWeight="Bold" FontFamily="CabinSketch"/>
-        <Grid HorizontalAlignment="Left" Height="146" Margin="297,569,0,0" VerticalAlignment="Top" Width="335">
+        <Grid HorizontalAlignment="Left" Height="146" Margin="26,569,0,0" VerticalAlignment="Top" Width="335">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="White" Offset="0"/>
@@ -112,7 +112,7 @@
             <RadioButton x:Name="rtb_0_1" Content="Kopfspiel 0,1 DIN 867" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
             <RadioButton x:Name="rtb_0_3" Content="Kopfspiel 0,3 DIN 867" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="142" Margin="297,403,0,0" VerticalAlignment="Top" Width="335">
+        <Grid HorizontalAlignment="Left" Height="142" Margin="26,403,0,0" VerticalAlignment="Top" Width="335">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="White" Offset="0"/>
@@ -124,7 +124,7 @@
             <RadioButton x:Name="rtb_EN_GJS" Content="EN-GJS-350" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" />
             <RadioButton x:Name="rtb_S235JR" Content="S235JR" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Height="23" Width="107"/>
         </Grid>
-        <Grid Height="543" Margin="1208,172,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="250">
+        <Grid Height="543" Margin="1093,170,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="250">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="White" Offset="0"/>
@@ -132,8 +132,22 @@
                 </LinearGradientBrush>
             </Grid.Background>
             <Label Content="Ihr individuelles Zahnrad:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="240" FontFamily="Arial" FontSize="20"/>
+            <Label x:Name="lb_" Content="Label" HorizontalAlignment="Left" Margin="25,80,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="105,84,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Label" HorizontalAlignment="Left" Margin="25,162,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="105,166,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Label" HorizontalAlignment="Left" Margin="25,231,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="105,235,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Label" HorizontalAlignment="Left" Margin="25,300,0,0" VerticalAlignment="Top"/>
+            <Label Content="Label" HorizontalAlignment="Left" Margin="25,379,0,0" VerticalAlignment="Top"/>
+            <Label Content="Label" HorizontalAlignment="Left" Margin="25,440,0,0" VerticalAlignment="Top"/>
+            <Label Content="Label" HorizontalAlignment="Left" Margin="25,507,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="105,304,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="105,379,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="105,444,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="105,511,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="65" Margin="675,650,0,0" VerticalAlignment="Top" Width="478">
+        <Grid HorizontalAlignment="Left" Height="65" Margin="463,648,0,0" VerticalAlignment="Top" Width="478">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="White" Offset="0"/>
