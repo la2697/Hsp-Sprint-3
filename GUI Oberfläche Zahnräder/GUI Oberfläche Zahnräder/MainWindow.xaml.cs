@@ -35,20 +35,26 @@ namespace GUI_Oberfläche_Zahnräder
 
         public MainWindow()
         {
+            
+
+            
 
 
         }
+
+        
+
 
         
         private void btn_Bestätigen_Click(object sender, RoutedEventArgs e)
         {
             if (rtb_EN_GJL.IsChecked == true)
             {
-                lb_Werkstoffwahl.Content = "EN-GJl";
+                lb_Werkstoffwahl.Content = "EN-GJl-200";
             }
             else if (rtb_EN_GJS.IsChecked == true)
             {
-                lb_Werkstoffwahl.Content = "EN-GJS";
+                lb_Werkstoffwahl.Content = "EN-GJS-350";
             }
             else if (rtb_S235JR.IsChecked == true)
             {
@@ -68,10 +74,22 @@ namespace GUI_Oberfläche_Zahnräder
                 lb_Kopfspiele1.Content = "0,167";
             }
 
+            lb_Modul2.Content = (txt_Modul.Text);
+            lb_Zähne.Content  = txt_Zähnezahl.Text;
+            lb_Dicke1.Content = txt_Dicke.Text;
+
+            
+
+
+
+
 
 
 
         }
+
+        
+        
 
 
 
