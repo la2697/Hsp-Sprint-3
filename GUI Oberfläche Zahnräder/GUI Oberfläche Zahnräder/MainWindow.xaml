@@ -132,14 +132,14 @@
                 </LinearGradientBrush>
             </Grid.Background>
             <Label Content="Ihr individuelles Zahnrad:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="240" FontFamily="Arial" FontSize="20"/>
-            <Label x:Name="lb_Zahnfußhöhe" Content="Zahnfußhöhe" HorizontalAlignment="Left" Margin="10,161,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lb_Zahnkopfhöhe" Content="Zahnkopfhöhe" HorizontalAlignment="Left" Margin="10,201,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lb_Teilung" Content="Teilung" HorizontalAlignment="Left" Margin="10,240,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.704,1.152"/>
-            <Label x:Name="lb_Fußkreisdurchmesser" Content="Fußkreisdurchmesser" HorizontalAlignment="Left" Margin="10,285,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lb_Grundkreis" Content="Grundkreisdurchmesser" HorizontalAlignment="Left" Margin="10,323,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lb_Gewicht" Content="Gewicht" HorizontalAlignment="Left" Margin="10,361,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lb_Preis" Content="Preis" HorizontalAlignment="Left" Margin="10,401,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lb_Werkstoff" Content="Werkstoff" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Zahnfußhöhe" Content="Zahnfußhöhe" HorizontalAlignment="Left" Margin="10,133,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Zahnkopfhöhe" Content="Zahnkopfhöhe" HorizontalAlignment="Left" Margin="10,176,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Teilung" Content="Teilung" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.704,1.152"/>
+            <Label x:Name="lb_Fußkreisdurchmesser" Content="Fußkreisdurchmesser" HorizontalAlignment="Left" Margin="10,263,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Grundkreis" Content="Grundkreisdurchmesser" HorizontalAlignment="Left" Margin="10,308,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.513,0.086"/>
+            <Label x:Name="lb_Gewicht" Content="Gewicht" HorizontalAlignment="Left" Margin="10,343,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Preis" Content="Preis" HorizontalAlignment="Left" Margin="10,384,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Werkstoff" Content="Werkstoff" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lb_Werkstoffwahl" Content="" HorizontalAlignment="Left" Margin="149,50,0,0" VerticalAlignment="Top" Width="91"/>
             <Label x:Name="lb_Fußhöhe" Content="" HorizontalAlignment="Left" Margin="182,94,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lb_Kopfhöhe" Content="" HorizontalAlignment="Left" Margin="182,145,0,0" VerticalAlignment="Top"/>
@@ -148,7 +148,7 @@
             <Label x:Name="lb_Grundkreis1" Content="" HorizontalAlignment="Left" Margin="182,277,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.13,0.68"/>
             <Label x:Name="lb_Gewicht1" Content="" HorizontalAlignment="Left" Margin="182,323,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lb_Preis1" Content="" HorizontalAlignment="Left" Margin="182,361,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lb_Kopfspiele" Content="Kopfspiel" HorizontalAlignment="Left" Margin="10,127,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Kopfspiele" Content="Kopfspiel" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lb_Kopfspiele1" Content="" HorizontalAlignment="Left" Margin="166,68,0,0" VerticalAlignment="Top"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="65" Margin="463,648,0,0" VerticalAlignment="Top" Width="478">
