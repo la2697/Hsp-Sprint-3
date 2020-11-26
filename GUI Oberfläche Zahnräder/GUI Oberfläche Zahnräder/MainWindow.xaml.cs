@@ -103,20 +103,10 @@ namespace GUI_Oberfläche_Zahnräder
 
                 }
 
-                //Berechnung Fußkreisdurchmesser df
-                try
-                {
-                    tb_Fußkreisdurchmesser.Text = (float.Parse(tb_Teilkreisdurchmesser.Text) - (2 * (float.Parse(txt_Modul.Text)+c))).ToString();
-                }
-                catch
-                {
-
-                }
-
                 //Berechnung Teilung p
                 try
                 {
-                    tb_Teilung.Text = (Pi * (float.Parse(txt_Modul.Text))).ToString();
+                    tb_Teilung.Text = Math.Round(Pi * (float.Parse(txt_Modul.Text))).ToString();
                 }
                 catch
                 {
@@ -132,24 +122,68 @@ namespace GUI_Oberfläche_Zahnräder
                 {
 
                 }
-
+            }
+            ////////////////////////////////////////////////////////////////////////////////////////////////// Berechnung df und hf
+            ///////////////////////////////Kopfspiel standard
+            if (rtb_Standard.IsChecked == true)
+            {
                 //Berechnung Zahnfußhöhe hf
                 try
                 {
                     tb_Zahnfußhöhe.Text = (float.Parse(txt_Modul.Text) + c).ToString();
                 }
-                catch
+                catch { }
+                
+                //Berechnung Fußkreisdurchmesser df
+                try
                 {
-
+                    tb_Fußkreisdurchmesser.Text = (float.Parse(tb_Teilkreisdurchmesser.Text) - (2 * (float.Parse(txt_Modul.Text)+c))).ToString();
                 }
+                catch { }
+            }
+            ///////////////////////////////////Kopfspiel 01
+            else if (rtb_0_1.IsChecked == true)
+            {
+                //Berechnung Zahnfußhöhe hf
+                try
+                {
+                    tb_Zahnfußhöhe.Text = (float.Parse(txt_Modul.Text) + ((float.Parse(txt_Modul.Text) * c1))).ToString();
+                }
+                catch { }
 
-            } 
+                //Berechnung Fußkreisdurchmesser df
+                try
+                {
+                    tb_Fußkreisdurchmesser.Text = (float.Parse(tb_Teilkreisdurchmesser.Text) - (2 * (float.Parse(txt_Modul.Text) + (float.Parse(txt_Modul.Text) * c1)))).ToString();
+                }
+                catch { }
+            }
+            //////////////////////////Kopfspiel 03
+            else if (rtb_0_3.IsChecked == true)
+            {
+                //Berechnung Zahnfußhöhe hf
+                try
+                {
+                    tb_Zahnfußhöhe.Text = (float.Parse(txt_Modul.Text) + ((float.Parse(txt_Modul.Text) * c2))).ToString();
+                }
+                catch { }
+
+                //Berechnung Fußkreisdurchmesser df
+                try
+                {
+                    tb_Fußkreisdurchmesser.Text = (float.Parse(tb_Teilkreisdurchmesser.Text) - (2 * (float.Parse(txt_Modul.Text) + (float.Parse(txt_Modul.Text) * c2)))).ToString();
+                }
+                catch { }
+            }
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////// Gewicht und Preis
 
             if (rtb_EN_GJL.IsChecked == true)
             {
                 try
                 {
-                    tb_Gewicht.Text = (dGJL * (float.Parse(txt_Dicke.Text) * ((float.Parse(tb_Teilkreisdurchmesser.Text) * (float.Parse(tb_Teilkreisdurchmesser.Text) * Pi)))) / 4).ToString();
+                    tb_Gewicht.Text = Math.Round(dGJL * (float.Parse(txt_Dicke.Text) * ((float.Parse(tb_Teilkreisdurchmesser.Text) * (float.Parse(tb_Teilkreisdurchmesser.Text) * Pi)))) / 4).ToString();
                 }
                 catch
                 {
@@ -159,7 +193,7 @@ namespace GUI_Oberfläche_Zahnräder
                 //Berechnung Preis
                 try
                 {
-                    tb_Preis.Text = ((float.Parse(tb_Gewicht.Text)/1000) * PrdGjl).ToString();
+                    tb_Preis.Text =((float.Parse(tb_Gewicht.Text)/1000) * PrdGjl).ToString();
                 }
                 catch
                 {
@@ -167,11 +201,12 @@ namespace GUI_Oberfläche_Zahnräder
                 }
 
             }
+
             else if (rtb_EN_GJS.IsChecked == true)
             {
                 try
                 {
-                    tb_Gewicht.Text = (dGJS * (float.Parse(txt_Dicke.Text) * ((float.Parse(tb_Teilkreisdurchmesser.Text) * (float.Parse(tb_Teilkreisdurchmesser.Text) * Pi)))) / 4).ToString();
+                    tb_Gewicht.Text = Math.Round(dGJS * (float.Parse(txt_Dicke.Text) * ((float.Parse(tb_Teilkreisdurchmesser.Text) * (float.Parse(tb_Teilkreisdurchmesser.Text) * Pi)))) / 4).ToString();
                 }
                 catch
                 {
@@ -194,7 +229,7 @@ namespace GUI_Oberfläche_Zahnräder
             {
                 try
                 {
-                    tb_Gewicht.Text = (S235JR * (float.Parse(txt_Dicke.Text) * ((float.Parse(tb_Teilkreisdurchmesser.Text) * (float.Parse(tb_Teilkreisdurchmesser.Text) * Pi)))) / 4).ToString();
+                    tb_Gewicht.Text = Math.Round(S235JR * (float.Parse(txt_Dicke.Text) * ((float.Parse(tb_Teilkreisdurchmesser.Text) * (float.Parse(tb_Teilkreisdurchmesser.Text) * Pi)))) / 4).ToString();
                 }
                 catch
                 {
@@ -216,11 +251,28 @@ namespace GUI_Oberfläche_Zahnräder
 
         }
 
-        
-        
+        private void btn_Zurück_Click(object sender, RoutedEventArgs e)
+        {
+            txt_Modul.Text = "";
+            txt_Zähnezahl.Text = "";
+            txt_Dicke.Text = "";
+            lb_Werkstoffwahl.Content = "";
+            lb_Kopfspiele1.Content = "";
+            lb_Modul2.Content = "";
+            lb_Zähne.Content = "";
+            lb_Dicke1.Content = "";
+            tb_Teilkreisdurchmesser.Text = "";
+            tb_Kopfkreisdurchmesser.Text = "";
+            tb_Fußkreisdurchmesser.Text = "";
+            tb_Teilung.Text = "";
+            tb_Zahnkopfhöhe.Text = "";
+            tb_Zahnfußhöhe.Text = "";
+            tb_Gewicht.Text = "";
+            tb_Preis.Text = "";
 
-
-
+            rtb_Standard.IsChecked = true;
+            rtb_EN_GJL.IsChecked = true;
+        }
     }
 }
 

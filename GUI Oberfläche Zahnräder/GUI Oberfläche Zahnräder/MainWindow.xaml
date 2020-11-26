@@ -155,7 +155,7 @@
                         </LinearGradientBrush>
                     </Label.Background>
                 </Label>
-                <TextBox x:Name="tb_Teilkreisdurchmesser" HorizontalAlignment="Left" Height="30" Margin="258,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16">
+                <TextBox x:Name="tb_Teilkreisdurchmesser" HorizontalAlignment="Left" Height="30" Margin="258,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16" IsHitTestVisible="False" IsReadOnlyCaretVisible="True" IsManipulationEnabled="True">
                     <TextBox.BorderBrush>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <LinearGradientBrush.RelativeTransform>
@@ -185,7 +185,7 @@
                         </LinearGradientBrush>
                     </TextBox.Background>
                 </TextBox>
-                <TextBox x:Name="tb_Kopfkreisdurchmesser" HorizontalAlignment="Left" Height="30" Margin="258,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16">
+                <TextBox x:Name="tb_Kopfkreisdurchmesser" HorizontalAlignment="Left" Height="30" Margin="258,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16" IsReadOnlyCaretVisible="True" IsManipulationEnabled="True">
                     <TextBox.BorderBrush>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <LinearGradientBrush.RelativeTransform>
@@ -215,7 +215,7 @@
                         </LinearGradientBrush>
                     </TextBox.Background>
                 </TextBox>
-                <TextBox x:Name="tb_Fußkreisdurchmesser" HorizontalAlignment="Left" Height="30" Margin="258,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16">
+                <TextBox x:Name="tb_Fußkreisdurchmesser" HorizontalAlignment="Left" Height="30" Margin="258,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16" IsReadOnlyCaretVisible="True" IsManipulationEnabled="True">
                     <TextBox.BorderBrush>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <LinearGradientBrush.RelativeTransform>
@@ -245,7 +245,7 @@
                         </LinearGradientBrush>
                     </TextBox.Background>
                 </TextBox>
-                <TextBox x:Name="tb_Teilung" HorizontalAlignment="Left" Height="30" Margin="258,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16">
+                <TextBox x:Name="tb_Teilung" HorizontalAlignment="Left" Height="30" Margin="258,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16" IsReadOnlyCaretVisible="True" IsManipulationEnabled="True">
                     <TextBox.BorderBrush>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <LinearGradientBrush.RelativeTransform>
@@ -275,7 +275,7 @@
                         </LinearGradientBrush>
                     </TextBox.Background>
                 </TextBox>
-                <TextBox x:Name="tb_Zahnkopfhöhe" HorizontalAlignment="Left" Height="30" Margin="258,187,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16">
+                <TextBox x:Name="tb_Zahnkopfhöhe" HorizontalAlignment="Left" Height="30" Margin="258,187,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16" IsReadOnlyCaretVisible="True" IsManipulationEnabled="True">
                     <TextBox.BorderBrush>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <LinearGradientBrush.RelativeTransform>
@@ -305,7 +305,7 @@
                         </LinearGradientBrush>
                     </TextBox.Background>
                 </TextBox>
-                <TextBox x:Name="tb_Zahnfußhöhe" HorizontalAlignment="Left" Height="30" Margin="258,219,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16">
+                <TextBox x:Name="tb_Zahnfußhöhe" HorizontalAlignment="Left" Height="30" Margin="258,219,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16" IsReadOnlyCaretVisible="True" IsManipulationEnabled="True">
                     <TextBox.BorderBrush>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <LinearGradientBrush.RelativeTransform>
@@ -335,7 +335,7 @@
                         </LinearGradientBrush>
                     </TextBox.Background>
                 </TextBox>
-                <TextBox x:Name="tb_Gewicht" HorizontalAlignment="Left" Height="30" Margin="258,251,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16">
+                <TextBox x:Name="tb_Gewicht" HorizontalAlignment="Left" Height="30" Margin="258,251,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16" IsReadOnlyCaretVisible="True" IsManipulationEnabled="True">
                     <TextBox.BorderBrush>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <LinearGradientBrush.RelativeTransform>
@@ -365,7 +365,7 @@
                         </LinearGradientBrush>
                     </TextBox.Background>
                 </TextBox>
-                <TextBox x:Name="tb_Preis" HorizontalAlignment="Left" Height="30" Margin="258,283,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16">
+                <TextBox x:Name="tb_Preis" HorizontalAlignment="Left" Height="30" Margin="258,283,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16" IsReadOnlyCaretVisible="True" IsManipulationEnabled="True">
                     <TextBox.BorderBrush>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <LinearGradientBrush.RelativeTransform>
@@ -716,7 +716,7 @@
                         <GradientStop Color="#FFE4E4E4" Offset="1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <RadioButton IsChecked="{x:Null}" GroupName="Kopfspiel" x:Name="rtb_0_1" Content="Kopfspiel 0,1 DIN 867 (auf Anfrage)" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Opacity="0.5" Height="25" Margin="10,5,0,0"/>
+                <RadioButton GroupName="Kopfspiel" x:Name="rtb_0_1" Content="Kopfspiel 0,1 DIN 867" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Height="25" Margin="10,5,0,0"/>
             </Grid>
             <Grid HorizontalAlignment="Left" Height="30" Margin="10,127,0,0" VerticalAlignment="Top" Width="380">
                 <Grid.Background>
@@ -733,7 +733,7 @@
                         <GradientStop Color="#FFE4E4E4" Offset="1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <RadioButton IsChecked="{x:Null}" GroupName="Kopfspiel" x:Name="rtb_0_3" Content="Kopfspiel 0,3 DIN 867 (auf Anfrage)" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Opacity="0.5" Height="27" Margin="10,3,0,0"/>
+                <RadioButton GroupName="Kopfspiel" x:Name="rtb_0_3" Content="Kopfspiel 0,3 DIN 867" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Height="27" Margin="10,3,0,0"/>
             </Grid>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="169" Margin="26,360,0,0" VerticalAlignment="Top" Width="400" Background="#FFAAAAAA">
@@ -838,7 +838,7 @@
                     </LinearGradientBrush>
                 </Label.Background>
             </Label>
-            <Label x:Name="lb_Werkstoffwahl" Content="" HorizontalAlignment="Left" Margin="255,59,0,0" VerticalAlignment="Top" Width="135" Height="30" FontSize="16" FontFamily="Calibri">
+            <Label  x:Name="lb_Werkstoffwahl" Content="" HorizontalAlignment="Left" Margin="255,59,0,0" VerticalAlignment="Top" Width="135" Height="30" FontSize="16" FontFamily="Calibri" IsManipulationEnabled="True">
                 <Label.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
@@ -874,7 +874,7 @@
                     </LinearGradientBrush>
                 </Label.Background>
             </Label>
-            <Label x:Name="lb_Kopfspiele1" Content="" Margin="255,91,10,0" VerticalAlignment="Top" Height="30" FontSize="16" FontFamily="Calibri">
+            <Label x:Name="lb_Kopfspiele1" Content="" Margin="255,91,10,0" VerticalAlignment="Top" Height="30" FontSize="16" FontFamily="Calibri" IsManipulationEnabled="True">
                 <Label.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
@@ -938,7 +938,7 @@
                     </LinearGradientBrush>
                 </Label.Background>
             </Label>
-            <Label x:Name="lb_Dicke1" Content="" Margin="255,187,10,0" VerticalAlignment="Top" Height="30" FontSize="16" FontFamily="Calibri">
+            <Label x:Name="lb_Dicke1" Content="" Margin="255,187,10,0" VerticalAlignment="Top" Height="30" FontSize="16" FontFamily="Calibri" IsManipulationEnabled="True">
                 <Label.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
@@ -954,7 +954,7 @@
                     </LinearGradientBrush>
                 </Label.Background>
             </Label>
-            <Label x:Name="lb_Zähne" Content="" Margin="255,155,10,0" VerticalAlignment="Top" Height="30" FontSize="16" FontFamily="Calibri">
+            <Label x:Name="lb_Zähne" Content="" Margin="255,155,10,0" VerticalAlignment="Top" Height="30" FontSize="16" FontFamily="Calibri" IsManipulationEnabled="True">
                 <Label.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
@@ -970,7 +970,7 @@
                     </LinearGradientBrush>
                 </Label.Background>
             </Label>
-            <Label x:Name="lb_Modul2" Content="" Margin="255,123,10,0" VerticalAlignment="Top" Height="30" FontSize="16" FontFamily="Calibri">
+            <Label x:Name="lb_Modul2" Content="" Margin="255,123,10,0" VerticalAlignment="Top" Height="30" FontSize="16" FontFamily="Calibri" IsManipulationEnabled="True">
                 <Label.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
@@ -988,7 +988,7 @@
             </Label>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="65" Margin="515,650,0,0" VerticalAlignment="Top" Width="478" Background="#FFAAAAAA">
-            <Button x:Name="btn_Zurück" Content="Zurücksetzen" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="220" Height="45" FontFamily="Arial" FontSize="20" FontWeight="Bold" FontStyle="Italic">
+            <Button x:Name="btn_Zurück" Content="Zurücksetzen" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="220" Height="45" FontFamily="Arial" FontSize="20" FontWeight="Bold" FontStyle="Italic" Click="btn_Zurück_Click">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
