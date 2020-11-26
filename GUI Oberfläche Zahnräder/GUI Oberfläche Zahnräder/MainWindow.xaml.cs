@@ -50,7 +50,7 @@ namespace GUI_Oberfläche_Zahnräder
         {
             if (rtb_EN_GJL.IsChecked == true)
             {
-                lb_Werkstoffwahl.Content = "EN-GJl-200";
+                lb_Werkstoffwahl.Content = "EN-GJL-200";
             }
             else if (rtb_EN_GJS.IsChecked == true)
             {
@@ -159,7 +159,7 @@ namespace GUI_Oberfläche_Zahnräder
                 //Berechnung Preis
                 try
                 {
-                    tb_Preis.Text = (float.Parse(tb_Gewicht.Text) * PrdGjl).ToString();
+                    tb_Preis.Text = ((float.Parse(tb_Gewicht.Text)/1000) * PrdGjl).ToString();
                 }
                 catch
                 {
@@ -181,7 +181,7 @@ namespace GUI_Oberfläche_Zahnräder
                 //Berechnung Preis
                 try
                 {
-                    tb_Preis.Text = (float.Parse(tb_Gewicht.Text) * PrGjs).ToString();
+                    tb_Preis.Text = ((float.Parse(tb_Gewicht.Text)/1000) * PrGjs).ToString();
                 }
                 catch
                 {
@@ -204,7 +204,7 @@ namespace GUI_Oberfläche_Zahnräder
                 //Berechnung Preis
                 try
                 {
-                    tb_Preis.Text = (float.Parse(tb_Gewicht.Text) * PrS235).ToString();
+                    tb_Preis.Text = ((float.Parse(tb_Gewicht.Text)/1000) * PrS235).ToString();
                 }
                 catch
                 {

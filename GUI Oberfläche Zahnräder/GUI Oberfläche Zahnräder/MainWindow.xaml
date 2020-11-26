@@ -10,56 +10,566 @@
     <Grid>
         <Grid Margin="0,150,10,0" VerticalAlignment="Top" HorizontalAlignment="Left">
             <Image Source="/Bilder/Zahnräder.jpg" VerticalAlignment="Top" HorizontalAlignment="Left" Opacity="0.4" Margin="10,0,0,0" Height="591"/>
-            <Grid HorizontalAlignment="Left" Height="307" Margin="1116,264,0,0" VerticalAlignment="Top" Width="327">
-                <Grid.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="White" Offset="0"/>
-                        <GradientStop Color="#FF7E7E7E" Offset="1"/>
-                    </LinearGradientBrush>
-                </Grid.Background>
-                <Label x:Name="lb_Preis" Content="Preis" HorizontalAlignment="Left" Margin="10,270,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
-                <Label x:Name="lb_Gewicht" Content="Gewicht" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
-                <Label x:Name="lb_Teilkreis" Content="Teilkreisdurchmesser" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.513,0.086" FontFamily="Calibri" FontSize="14"/>
-                <Label x:Name="lb_Fußkreisdurchmesser" Content="Fußkreisdurchmesser" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
-                <Label x:Name="lb_Teilung" Content="Teilung" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.704,1.152" FontFamily="Calibri" FontSize="14"/>
-                <Label x:Name="lb_Zahnkopfhöhe" Content="Zahnkopfhöhe" HorizontalAlignment="Left" Margin="10,174,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
-                <Label x:Name="lb_Zahnfußhöhe" Content="Zahnfußhöhe" HorizontalAlignment="Left" Margin="10,206,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
-                <Label Content="Unsere Ausgabeparameter:" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top" Width="247" FontFamily="Calibri" FontSize="20" FontWeight="Bold"/>
-                <Label Content="Kopfkreisdurchmesser:" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Width="132"/>
-                <TextBox x:Name="tb_Teilkreisdurchmesser" HorizontalAlignment="Left" Height="23" Margin="197,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                <TextBox x:Name="tb_Kopfkreisdurchmesser" HorizontalAlignment="Left" Height="23" Margin="197,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                <TextBox x:Name="tb_Fußkreisdurchmesser" HorizontalAlignment="Left" Height="23" Margin="197,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                <TextBox x:Name="tb_Teilung" HorizontalAlignment="Left" Height="23" Margin="197,151,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                <TextBox x:Name="tb_Zahnkopfhöhe" HorizontalAlignment="Left" Height="23" Margin="197,178,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                <TextBox x:Name="tb_Zahnfußhöhe" HorizontalAlignment="Left" Height="23" Margin="197,210,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                <TextBox x:Name="tb_Gewicht" HorizontalAlignment="Left" Height="23" Margin="197,238,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                <TextBox x:Name="tb_Preis" HorizontalAlignment="Left" Height="23" Margin="197,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Grid HorizontalAlignment="Left" Height="321" Margin="1074,250,0,0" VerticalAlignment="Top" Width="400" Background="#FFAAAAAA">
+                <Label x:Name="lb_Preis" Content="Preis [€]:" HorizontalAlignment="Left" Margin="10,283,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="16" Width="317" Height="30">
+                    <Label.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                            <GradientStop Color="#FFAAAAAA"/>
+                        </LinearGradientBrush>
+                    </Label.Background>
+                </Label>
+                <Label x:Name="lb_Gewicht" Content="Gewicht [g]:" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="16" Width="317" Height="30">
+                    <Label.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                            <GradientStop Color="#FFAAAAAA"/>
+                        </LinearGradientBrush>
+                    </Label.Background>
+                </Label>
+                <Label x:Name="lb_Teilkreis" Content="Teilkreisdurchmesser [mm]:" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.513,0.086" FontFamily="Calibri" FontSize="16" Width="317" Height="30">
+                    <Label.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                            <GradientStop Color="#FFAAAAAA"/>
+                        </LinearGradientBrush>
+                    </Label.Background>
+                </Label>
+                <Label x:Name="lb_Fußkreisdurchmesser" Content="Fußkreisdurchmesser[mm]:" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="16" Width="317" Height="30">
+                    <Label.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                            <GradientStop Color="#FFAAAAAA"/>
+                        </LinearGradientBrush>
+                    </Label.Background>
+                </Label>
+                <Label x:Name="lb_Teilung" Content="Teilung:" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.704,1.152" FontFamily="Calibri" FontSize="16" Height="30" Width="317">
+                    <Label.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                            <GradientStop Color="#FFAAAAAA"/>
+                        </LinearGradientBrush>
+                    </Label.Background>
+                </Label>
+                <Label x:Name="lb_Zahnkopfhöhe" Content="Zahnkopfhöhe [mm]:" HorizontalAlignment="Left" Margin="10,187,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="16" Width="317" Height="30">
+                    <Label.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                            <GradientStop Color="#FFAAAAAA"/>
+                        </LinearGradientBrush>
+                    </Label.Background>
+                </Label>
+                <Label x:Name="lb_Zahnfußhöhe" Content="Zahnfußhöhe [mm]:" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="16" Width="317" Height="30">
+                    <Label.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                            <GradientStop Color="#FFAAAAAA"/>
+                        </LinearGradientBrush>
+                    </Label.Background>
+                </Label>
+                <Label Content="Unsere Ausgabeparameter:" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top" Width="317" FontFamily="Calibri" FontSize="24" FontWeight="Bold">
+                    <Label.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFA8A8A8" Offset="0"/>
+                            <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.Background>
+                </Label>
+                <Label Content="Kopfkreisdurchmesser [mm]:" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" Width="317" FontFamily="Calibri" FontSize="16" Height="30">
+                    <Label.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                            <GradientStop Color="#FFAAAAAA"/>
+                        </LinearGradientBrush>
+                    </Label.Background>
+                </Label>
+                <TextBox x:Name="tb_Teilkreisdurchmesser" HorizontalAlignment="Left" Height="30" Margin="258,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16">
+                    <TextBox.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFACACAC" Offset="0"/>
+                            <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.BorderBrush>
+                    <TextBox.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                            <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.Background>
+                </TextBox>
+                <TextBox x:Name="tb_Kopfkreisdurchmesser" HorizontalAlignment="Left" Height="30" Margin="258,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16">
+                    <TextBox.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFACACAC" Offset="0"/>
+                            <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.BorderBrush>
+                    <TextBox.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                            <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.Background>
+                </TextBox>
+                <TextBox x:Name="tb_Fußkreisdurchmesser" HorizontalAlignment="Left" Height="30" Margin="258,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16">
+                    <TextBox.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFACACAC" Offset="0"/>
+                            <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.BorderBrush>
+                    <TextBox.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                            <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.Background>
+                </TextBox>
+                <TextBox x:Name="tb_Teilung" HorizontalAlignment="Left" Height="30" Margin="258,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16">
+                    <TextBox.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFACACAC" Offset="0"/>
+                            <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.BorderBrush>
+                    <TextBox.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                            <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.Background>
+                </TextBox>
+                <TextBox x:Name="tb_Zahnkopfhöhe" HorizontalAlignment="Left" Height="30" Margin="258,187,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16">
+                    <TextBox.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFACACAC" Offset="0"/>
+                            <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.BorderBrush>
+                    <TextBox.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                            <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.Background>
+                </TextBox>
+                <TextBox x:Name="tb_Zahnfußhöhe" HorizontalAlignment="Left" Height="30" Margin="258,219,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16">
+                    <TextBox.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFACACAC" Offset="0"/>
+                            <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.BorderBrush>
+                    <TextBox.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                            <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.Background>
+                </TextBox>
+                <TextBox x:Name="tb_Gewicht" HorizontalAlignment="Left" Height="30" Margin="258,251,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16">
+                    <TextBox.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFACACAC" Offset="0"/>
+                            <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.BorderBrush>
+                    <TextBox.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                            <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.Background>
+                </TextBox>
+                <TextBox x:Name="tb_Preis" HorizontalAlignment="Left" Height="30" Margin="258,283,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" FontSize="16">
+                    <TextBox.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFACACAC" Offset="0"/>
+                            <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.BorderBrush>
+                    <TextBox.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                            <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.Background>
+                </TextBox>
             </Grid>
         </Grid>
 
         <Image HorizontalAlignment="Right" Height="124" Margin="0,10,10,0" VerticalAlignment="Top" Width="276" Source="/Bilder/Jade Hochschule Logo.jpg"/>
-        <Image Source="/Bilder/Firma.png" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="167"/>
-        <Grid HorizontalAlignment="Left" Height="202" Margin="26,170,0,0" VerticalAlignment="Top" Width="389">
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="White"/>
-                    <GradientStop Color="#FF7A7A7A" Offset="1"/>
-                </LinearGradientBrush>
-            </Grid.Background>
-            <Label x:Name="lb_Modul" Content="Modul:" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Margin="0,43,0,0"/>
-            <TextBox x:Name="txt_Modul" HorizontalAlignment="Left" Height="33" Margin="230,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54"  FontFamily="Arial" FontSize="20"/>
-            <Label x:Name="lb_Zähnezahl" Content="Zähnezahl:" Margin="0,98,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
-            <TextBox x:Name="txt_Zähnezahl" HorizontalAlignment="Left" Height="33" Margin="230,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" FontFamily="Arial" FontSize="20"/>
-            <Label x:Name="lb_Dicke" Content="Dicke [mm]:" Margin="0,153,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20"/>
-            <TextBox x:Name="txt_Dicke" HorizontalAlignment="Left" Height="33" Margin="230,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" RenderTransformOrigin="0.444,2.03" FontFamily="Arial" FontSize="20"/>
-            <Label Content="Zahnradparameter:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="43" Width="284" FontFamily="Arial" FontSize="22" FontWeight="Bold"/>
+        <Image Source="/Bilder/Firma.png" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="157" Margin="10,10,0,0"/>
+        <Grid HorizontalAlignment="Left" Height="175" Margin="26,160,0,0" VerticalAlignment="Top" Width="400" Background="#FFAAAAAA">
+            <Label x:Name="lb_Modul" Content="Modul:" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Margin="10,68,0,0" Height="30">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <TextBox x:Name="txt_Modul" HorizontalAlignment="Left" Height="30" Margin="281,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109"  FontFamily="Arial" FontSize="20">
+                <TextBox.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.BorderBrush>
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE8E8E8" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label x:Name="lb_Zähnezahl" Content="Zähnezahl:" Margin="10,101,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Height="30">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <TextBox x:Name="txt_Zähnezahl" HorizontalAlignment="Left" Height="30" Margin="281,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" FontFamily="Arial" FontSize="20">
+                <TextBox.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.BorderBrush>
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE8E8E8" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label x:Name="lb_Dicke" Content="Dicke [mm]:" Margin="10,134,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Height="30">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <TextBox x:Name="txt_Dicke" HorizontalAlignment="Left" Height="30" Margin="281,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" RenderTransformOrigin="0.444,2.03" FontFamily="Arial" FontSize="20">
+                <TextBox.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.BorderBrush>
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE8E8E8" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label Content="Zahnradparameter:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="43" Width="390" FontFamily="Calibri" FontSize="24" Margin="10,10,0,0" FontWeight="Bold">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="464" Margin="449,170,0,0" VerticalAlignment="Top" Width="622" Background="#FFACACAC">
+        <Grid HorizontalAlignment="Left" Height="464" Margin="439,159,0,0" VerticalAlignment="Top" Width="622" Background="#FFACACAC">
             <Grid x:Name="gr_Gerade" HorizontalAlignment="Left" Height="195" Margin="10,63,0,0" VerticalAlignment="Top" Width="300">
                 <Grid.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFC7C7C7" Offset="0.238"/>
-                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE8E8E8" Offset="1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
                 <Grid.ColumnDefinitions>
@@ -72,9 +582,8 @@
                 </Grid.RowDefinitions>
                 <RadioButton IsChecked="True" GroupName="Wähle ein Zahnrad" x:Name="rtb_Gerad" Content="Stirnzahnrad" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="18" Margin="89,10,0,0"/>
                 <Image x:Name="Im_Gerad" HorizontalAlignment="Left" Height="126" Margin="89,50,0,0" VerticalAlignment="Top" Width="127" Source="/Bilder/Stirnrad.PNG" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-                <Border BorderBrush="Black" BorderThickness="1" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
             </Grid>
-            <Label Content="Wähle ein Zahnradtyp:" VerticalAlignment="Top" FontSize="24" FontFamily="Calibri" Foreground="Black" AutomationProperties.IsOffscreenBehavior="Onscreen" HorizontalAlignment="Right" Width="612" Height="39" Margin="0,10,0,0">
+            <Label Content="Wähle ein Zahnradtyp:" VerticalAlignment="Top" FontSize="24" FontFamily="Calibri" Foreground="Black" AutomationProperties.IsOffscreenBehavior="Onscreen" HorizontalAlignment="Right" Width="612" Height="39" Margin="0,10,0,0" FontWeight="Bold">
                 <Label.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
@@ -90,22 +599,41 @@
                     </LinearGradientBrush>
                 </Label.Background>
             </Label>
-            <Grid x:Name="gr_Schräg" Width="300" Height="195" Margin="0,63,7,0" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <Grid x:Name="gr_Schräg" Width="300" Height="195" Margin="0,63,7,0" VerticalAlignment="Top" HorizontalAlignment="Right" Opacity="0.5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="27*"/>
+                    <ColumnDefinition Width="274*"/>
+                </Grid.ColumnDefinitions>
                 <Grid.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFC9C9C9" Offset="0.235"/>
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
                         <GradientStop Color="#FFE8E8E8" Offset="1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <Image x:Name="Im_Schräg" Height="132" Margin="88,53,0,0" VerticalAlignment="Top" Source="/Bilder/Stirnrad SV.PNG" HorizontalAlignment="Left" Width="133" Opacity="0.5"/>
-                <RadioButton IsChecked="{x:Null}" GroupName="Wähle ein Zahnrad" x:Name="rtb_Schräg" Content="Stirnrad schrägverzahnt (auf Anfrage)" Margin="5,10,5,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="18" Height="27" Opacity="0.45"/>
-                <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Width="300"/>
+                <Image x:Name="Im_Schräg" Height="132" Margin="61.5,53,0,0" VerticalAlignment="Top" Source="/Bilder/Stirnrad SV.PNG" HorizontalAlignment="Left" Width="133" Opacity="0.5" Grid.Column="1"/>
+                <RadioButton IsChecked="{x:Null}" GroupName="Wähle ein Zahnrad" x:Name="rtb_Schräg" Content="Stirnrad schrägverzahnt (auf Anfrage)" Margin="5,10,5,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="18" Height="27" Opacity="0.5" Grid.ColumnSpan="2"/>
             </Grid>
-            <Grid x:Name="gr_Kegelrad" HorizontalAlignment="Left" Height="195" Margin="10,263,0,0" VerticalAlignment="Top" Width="300">
+            <Grid x:Name="gr_Kegelrad" HorizontalAlignment="Left" Height="195" Margin="10,263,0,0" VerticalAlignment="Top" Width="300" Opacity="0.5">
                 <Grid.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="#FFC9C9C9" Offset="0.254"/>
-                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE8E8E8" Offset="1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
                 <Grid.ColumnDefinitions>
@@ -116,80 +644,382 @@
                     <RowDefinition Height="57*"/>
                     <RowDefinition Height="151*"/>
                 </Grid.RowDefinitions>
-                <Image x:Name="Im_Kegelrad" HorizontalAlignment="Left" Margin="100,0,0,0" Width="119" Source="/Bilder/Kegelrad.PNG" RenderTransformOrigin="-1.075,0.14" Height="140" VerticalAlignment="Top" Grid.Row="1" Opacity="0.5"/>
+                <Image x:Name="Im_Kegelrad" HorizontalAlignment="Left" Margin="100,47,0,0" Width="119" Source="/Bilder/Kegelrad.PNG" RenderTransformOrigin="-1.075,0.14" Height="140" VerticalAlignment="Top" Opacity="0.5" Grid.RowSpan="2"/>
                 <RadioButton IsChecked="{x:Null}" GroupName="Wähle ein Zahnrad"  x:Name="rtb_Kegelrad" Content="Kegelzahnrad (auf Anfrage)" VerticalAlignment="Top" FontFamily="Calibri" FontSize="18" Margin="40,10,10,0" Opacity="0.5"/>
-                <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Width="300" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
             </Grid>
-            <Grid x:Name="gr_Innenzahnrad" HorizontalAlignment="Left" Height="195" Margin="315,263,0,0" VerticalAlignment="Top" Width="300">
+            <Grid x:Name="gr_Innenzahnrad" HorizontalAlignment="Left" Height="195" Margin="315,263,0,0" VerticalAlignment="Top" Width="300" Opacity="0.5">
                 <Grid.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFC7C7C7" Offset="0.257"/>
-                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE8E8E8" Offset="1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
                 <Image  x:Name="Im_Innenzahnrad" HorizontalAlignment="Left" Height="134" Margin="86,49,0,0" VerticalAlignment="Top" Width="131" Source="/Bilder/Innenrad.PNG" Opacity="0.5"/>
                 <RadioButton IsChecked="{x:Null}" GroupName="Wähle ein Zahnrad" x:Name="rtb_Innenzahnrad" Content="Innenzahnrad (auf Anfrage)" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="18" Margin="40,10,0,0" Opacity="0.5"/>
-                <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Width="300"/>
             </Grid>
-            <Border BorderBrush="Black" BorderThickness="1"/>
         </Grid>
-        <Label Content="Zahnrad Zar GmbH und Co. KG" HorizontalAlignment="Center" Margin="240,32,286,0" VerticalAlignment="Top" Height="83" Width="968" FontSize="48" FontWeight="Bold" FontFamily="CabinSketch"/>
-        <Grid HorizontalAlignment="Left" Height="146" Margin="26,569,0,0" VerticalAlignment="Top" Width="389">
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="White" Offset="0"/>
-                    <GradientStop Color="#FF7A7A7A" Offset="0.898"/>
-                </LinearGradientBrush>
-            </Grid.Background>
-            <Label Content="Wähle ein Kopfspiel:" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" FontWeight="Bold"/>
-            <RadioButton IsChecked="True" GroupName="Kopfspiel" x:Name="rtb_Standard" Content="Standardkopfspiel 0,167 DIN 867" HorizontalAlignment="Left" Margin="10,40,-10,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" />
-            <RadioButton IsChecked="{x:Null}" GroupName="Kopfspiel" x:Name="rtb_0_1" Content="Kopfspiel 0,1 DIN 867 (auf Anfrage)" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Opacity="0.5"/>
-            <RadioButton IsChecked="{x:Null}" GroupName="Kopfspiel" x:Name="rtb_0_3" Content="Kopfspiel 0,3 DIN 867 (auf Anfrage)" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Opacity="0.5"/>
+        <Label Content="Zahnrad Zar GmbH und Co. KG" HorizontalAlignment="Center" Margin="282,32,286,0" VerticalAlignment="Top" Height="83" Width="926" FontSize="60" FontWeight="Bold" FontFamily="Yu Gothic UI Light"/>
+        <Grid HorizontalAlignment="Left" Height="169" Margin="26,551,0,0" VerticalAlignment="Top" Width="400" Background="#FFAAAAAA">
+            <Label Content="Wähle ein Kopfspiel:" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="24" Margin="10,10,0,0" Width="390" FontWeight="Bold">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Grid HorizontalAlignment="Left" Height="30" Margin="10,61,0,0" VerticalAlignment="Top" Width="380">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <RadioButton IsChecked="True" GroupName="Kopfspiel" x:Name="rtb_Standard" Content="Standardkopfspiel 0,167 DIN 867" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Height="25" Margin="10,5,0,0" />
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="30" Margin="10,94,0,0" VerticalAlignment="Top" Width="380">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <RadioButton IsChecked="{x:Null}" GroupName="Kopfspiel" x:Name="rtb_0_1" Content="Kopfspiel 0,1 DIN 867 (auf Anfrage)" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Opacity="0.5" Height="25" Margin="10,5,0,0"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="30" Margin="10,127,0,0" VerticalAlignment="Top" Width="380">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <RadioButton IsChecked="{x:Null}" GroupName="Kopfspiel" x:Name="rtb_0_3" Content="Kopfspiel 0,3 DIN 867 (auf Anfrage)" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Opacity="0.5" Height="27" Margin="10,3,0,0"/>
+            </Grid>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="142" Margin="26,403,0,0" VerticalAlignment="Top" Width="389">
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="White" Offset="0"/>
-                    <GradientStop Color="#FF7A7A7A" Offset="0.905"/>
-                </LinearGradientBrush>
-            </Grid.Background>
-            <Label HorizontalAlignment="Left"  VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Width="225" FontWeight="Bold" Content="Wähle ein Werkstoff:" />
-            <RadioButton IsChecked="True" GroupName="Werkstoff"  x:Name="rtb_EN_GJL" Content="EN-GJL-200" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" />
-            <RadioButton GroupName="Werkstoff" x:Name="rtb_EN_GJS" Content="EN-GJS-350" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" />
-            <RadioButton GroupName="Werkstoff" x:Name="rtb_S235JR" Content="S235JR" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Height="23" Width="107"/>
+        <Grid HorizontalAlignment="Left" Height="169" Margin="26,360,0,0" VerticalAlignment="Top" Width="400" Background="#FFAAAAAA">
+            <Label HorizontalAlignment="Left"  VerticalAlignment="Top" FontFamily="Calibri" FontSize="24" Width="390" Content="Wähle ein Werkstoff:" Margin="10,10,0,0" FontWeight="Bold" >
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Grid HorizontalAlignment="Left" Height="30" Margin="10,95,0,0" VerticalAlignment="Top" Width="380">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <RadioButton GroupName="Werkstoff" x:Name="rtb_EN_GJS" Content="EN-GJS-350" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Height="20" />
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="30" Margin="10,128,0,0" VerticalAlignment="Top" Width="380">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <RadioButton GroupName="Werkstoff" x:Name="rtb_S235JR" Content="S235JR" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Height="20" Width="75" Margin="10,5,0,0"/>
+            </Grid>
+            <Grid HorizontalAlignment="Right" Height="30" Margin="0,0,10,77" VerticalAlignment="Bottom" Width="380" RenderTransformOrigin="0.489,0.543">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <RadioButton IsChecked="True" GroupName="Werkstoff"  x:Name="rtb_EN_GJL" Content="EN-GJL-200" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Height="20" />
+            </Grid>
         </Grid>
-        <Grid Height="226" Margin="1117,170,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="328">
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="White" Offset="0"/>
-                    <GradientStop Color="#FF7A7A7A" Offset="0.965"/>
-                </LinearGradientBrush>
-            </Grid.Background>
-            <Label Content="Ihre Eingabewerte:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="240" FontFamily="Calibri" FontSize="20" FontWeight="Bold"/>
-            <Label x:Name="lb_Werkstoff" Content="Werkstoff:" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" Width="93" FontSize="14" FontFamily="Calibri"/>
-            <Label x:Name="lb_Werkstoffwahl" Content="" HorizontalAlignment="Left" Margin="248,60,0,0" VerticalAlignment="Top" Width="70"/>
+        <Grid Height="226" Margin="1075,160,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="400" Background="#FFACACAC">
+            <Label Content="Ihre Eingabewerte:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="318" FontFamily="Calibri" FontSize="24" Margin="10,10,0,0" FontWeight="Bold">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFA8A8A8" Offset="0"/>
+                        <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Label x:Name="lb_Werkstoff" Content="Werkstoff:" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Width="318" FontSize="16" FontFamily="Calibri" Height="30">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE4E4E4" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Label x:Name="lb_Werkstoffwahl" Content="" HorizontalAlignment="Left" Margin="255,59,0,0" VerticalAlignment="Top" Width="135" Height="30" FontSize="16" FontFamily="Calibri">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
 
 
 
 
-            <Label x:Name="lb_Kopfspiele" Content="Kopfspiel:" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="93" FontFamily="Calibri" FontSize="14"/>
-            <Label x:Name="lb_Kopfspiele1" Content="" Margin="248,94,10,0" VerticalAlignment="Top"/>
-            <Label Content="Modul:" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Width="93" FontFamily="Calibri" FontSize="14"/>
-            <Label Content="Zähnezahl:" HorizontalAlignment="Left" Margin="10,156,0,0" VerticalAlignment="Top" Width="93" FontFamily="Calibri" FontSize="14"/>
-            <Label Content="Dicke [mm]:" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Width="93" FontFamily="Calibri" FontSize="14"/>
-            <Label x:Name="lb_Dicke1" Content="" Margin="248,190,10,0" VerticalAlignment="Top"/>
-            <Label x:Name="lb_Zähne" Content="" Margin="248,156,10,0" VerticalAlignment="Top"/>
-            <Label x:Name="lb_Modul2" Content="" Margin="248,125,10,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Kopfspiele" Content="Kopfspiel:" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" Width="318" FontFamily="Calibri" FontSize="16" Height="30">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFA8A8A8" Offset="0"/>
+                        <GradientStop Color="#FFE8E8E8" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Label x:Name="lb_Kopfspiele1" Content="" Margin="255,91,10,0" VerticalAlignment="Top" Height="30" FontSize="16" FontFamily="Calibri">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Label Content="Modul:" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top" Width="318" FontFamily="Calibri" FontSize="16" Height="30">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFA8A8A8" Offset="0"/>
+                        <GradientStop Color="#FFE8E8E8" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Label Content="Zähnezahl:" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top" Width="318" FontFamily="Calibri" FontSize="16" Height="30">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFA8A8A8" Offset="0"/>
+                        <GradientStop Color="#FFE8E8E8" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Label Content="Dicke [mm]:" HorizontalAlignment="Left" Margin="10,187,0,0" VerticalAlignment="Top" Width="318" FontFamily="Calibri" FontSize="16" Height="30">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFA8A8A8" Offset="0"/>
+                        <GradientStop Color="#FFE8E8E8" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Label x:Name="lb_Dicke1" Content="" Margin="255,187,10,0" VerticalAlignment="Top" Height="30" FontSize="16" FontFamily="Calibri">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Label x:Name="lb_Zähne" Content="" Margin="255,155,10,0" VerticalAlignment="Top" Height="30" FontSize="16" FontFamily="Calibri">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Label x:Name="lb_Modul2" Content="" Margin="255,123,10,0" VerticalAlignment="Top" Height="30" FontSize="16" FontFamily="Calibri">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="65" Margin="523,650,0,0" VerticalAlignment="Top" Width="478">
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="White" Offset="0"/>
-                    <GradientStop Color="#FF787878" Offset="0.93"/>
-                </LinearGradientBrush>
-            </Grid.Background>
-            <Button x:Name="btn_Zurück" Content="Zurücksetzen" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="220" Height="45" FontFamily="Arial" FontSize="20" Background="#FFFF9F9F" FontWeight="Bold" FontStyle="Italic"/>
-            <Button Click="btn_Bestätigen_Click" x:Name="btn_Bestätigen" Content="Bestätigen" HorizontalAlignment="Left" Margin="249,10,0,0" VerticalAlignment="Top" Width="219" Height="45" FontFamily="Arial" FontSize="20" Background="#FFD2FFBD" FontWeight="Bold" FontStyle="Italic"/>
+        <Grid HorizontalAlignment="Left" Height="65" Margin="515,650,0,0" VerticalAlignment="Top" Width="478" Background="#FFAAAAAA">
+            <Button x:Name="btn_Zurück" Content="Zurücksetzen" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="220" Height="45" FontFamily="Arial" FontSize="20" FontWeight="Bold" FontStyle="Italic">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Click="btn_Bestätigen_Click" x:Name="btn_Bestätigen" Content="Bestätigen" HorizontalAlignment="Left" Margin="249,10,0,0" VerticalAlignment="Top" Width="219" Height="45" FontFamily="Arial" FontSize="20" FontWeight="Bold" FontStyle="Italic">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FFAAAAAA" Offset="0"/>
+                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
         </Grid>
         <Label x:Name="lb_Teilkreisdurchmesser" Content="" HorizontalAlignment="Left" Margin="223,277,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lb_Geschäftsführer" Content="Geschäftsführer Kai Mecke" Margin="10,105,1282.6,625.4" FontSize="14"/>
