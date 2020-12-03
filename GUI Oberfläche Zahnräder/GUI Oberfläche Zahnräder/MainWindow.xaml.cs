@@ -19,261 +19,218 @@ namespace GUI_Oberfläche_Zahnräder
     /// Interaktionslogik für MainWindow.xaml
     /// </summary>
 
+
+
     public partial class MainWindow : Window
     {
-        public const double Pi = Math.PI;
-        public const double S235JR = 0.00785; // Dichte S235JR 
-        public const double dGJL = 7.15 / 1000; //Dichte EN-GJL-200
-        public const double dGJS = 7.1 / 1000; //Dichte EN-GJS-350
-        public const double PrS235 = 3.63; // Preis S235JR
-        public const double PrdGjl = 0.80; // Preis EN-GJL-200
-        public const double PrGjs = 1.10; // Preis EN-GJS-350
-        public const double c = 0.167; // Kopfspiel Standard
-        public const double c1 = 0.1; // Kopfspiel DIN 867
-        public const double c2 = 0.3; // Kopfspiel DIN 867
-        public static double cosα = Math.Cos(20); // Normverzahnung cos20°
+
+        //Zahlencheck
+        public bool Zahlenprüfung(string Zahlencheck)
+        {
+            try
+            {
+                double doublezahl = double.Parse(Zahlencheck);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
+
+        public class Außenverzahnung
+        {
+            //Eingabevariablen
+            public double m;                            //Modul
+            public double c;                            //Kopfspiel Standard
+            public double d;                            //Teilkreisdurchmesser
+            public double z;                            //Zähnezahl
+            public double t;                            //Werkstoffdicke
+
+
+            //Help
+            public int Fehler;
+
+            //Werkstoffangaben
+            public double Preis_S235JR = 3.63;          //Preis S235JR
+            public double Preis_GJL = 0.80;             //Preis GJL
+            public double Preis_GJS = 1.10;             //Preis GJS
+
+
+            //Ausgabevariablen
+            public double h;                            //Zahnhöhe
+            public double ha;                           //Zahnkopfhöhe
+            public double hf;                           //Zahnfußhöhe
+            public double df;                           //Fußkreisdurchmesser
+            public double da;                           //Kopfkreisdurchmesser
+            public double p;                            //Teilung
+            public double material;                     //Materialdichte g/cm3
+            public double preis;                        //Preis pro kg
+            public double A;                            //Flächeninhalt mm2
+            public double V;                            //Volumen mm3
+            public double M;                            //Masse g
+            public double Wert;                         //Preis
+
+           
+
+
+            public void Berechnung()
+            {
+                //Formeln
+                d = m * z;
+                h = (2 * m) + c;
+                p = Math.PI * m;
+                da = d + (2 + m);
+                ha = m;
+                hf = m + c;
+                df = d - 2 * (m + c);
+                A = (Math.PI * d * d) / 4;
+                V = A * t;
+                M = V * 1 / 1000 * material;
+                Wert = M * 1 / 1000 * preis;
+
+                //Rundung
+                d = Math.Round(d, 2);
+                p = Math.Round(p, 2);
+                h = Math.Round(h, 2);
+                da = Math.Round(da, 2);
+                ha = Math.Round(ha, 2);
+                df = Math.Round(df, 2);
+                A = Math.Round(A, 2);
+                V = Math.Round(V, 2);
+                M = Math.Round(M, 2);
+                Wert = Math.Round(Wert, 2);
+            }
+
+        }
 
         public MainWindow()
         {
-            
-
-            
-
 
         }
 
-        
-
-
-        
-        private void btn_Bestätigen_Click(object sender, RoutedEventArgs e)
+        public void btn_Bestätigen_Click(object sender, RoutedEventArgs e)
         {
-            if (rtb_EN_GJL.IsChecked == true)
+            Außenverzahnung av = new Außenverzahnung();
+            switch (CB_Werkstoff.Text)
             {
-                lb_Werkstoffwahl.Content = "EN-GJL-200";
+                case "GJL":
+                    av.material = 7.15;
+                    av.preis = 0.80;
+                    break;
+
+                case "GJS":
+                    av.material = 7.1;
+                    av.preis = 1.10;
+                    break;
+
+                case "S235JR":
+                    av.material = 7.85;
+                    av.preis = 3.63;
+                    break;
+
+                case "Bitte wählen...":
+                    break;
             }
-            else if (rtb_EN_GJS.IsChecked == true)
+            
+            
+
+            //Eingabechecks
+
+            //Eingabecheck Modul
+            string Zahlencheck = txt_Modul.Text;
+            if (Zahlenprüfung(Zahlencheck) == true)
             {
-                lb_Werkstoffwahl.Content = "EN-GJS-350";
-            }
-            else if (rtb_S235JR.IsChecked == true)
-            {
-                lb_Werkstoffwahl.Content = "S235JR";
-            }
-
-            if(rtb_0_1.IsChecked == true)
-            {
-                lb_Kopfspiele1.Content = "0,1";
-            }
-            else if(rtb_0_3.IsChecked == true)
-            {
-                lb_Kopfspiele1.Content = "0,3";
-            }
-            else if(rtb_Standard.IsChecked == true)
-            {
-                lb_Kopfspiele1.Content = "0,167";
-            }
-
-            lb_Modul2.Content = (txt_Modul.Text);
-            lb_Zähne.Content  = txt_Zähnezahl.Text;
-            lb_Dicke1.Content = txt_Dicke.Text;
-
-
-
-            if (rtb_EN_GJL.IsChecked == true || rtb_EN_GJS.IsChecked == true || rtb_S235JR.IsChecked == true)
-
-            {
-                //Berechnung Teilkreisdurchmesser d
-                try
+                av.m = Convert.ToDouble(txt_Modul.Text);
+                if (av.m <= 0)
                 {
-                    tb_Teilkreisdurchmesser.Text = (float.Parse(txt_Modul.Text) * float.Parse(txt_Zähnezahl.Text)).ToString();
-                }
-                catch
-                {
-
-                }
-
-                //Berechnung Kopfkreisdurchmesser da
-                try
-                {
-                    tb_Kopfkreisdurchmesser.Text = (float.Parse(tb_Teilkreisdurchmesser.Text) + (2 * float.Parse(txt_Modul.Text))).ToString();
-                }
-                catch
-                {
-
-                }
-
-                //Berechnung Teilung p
-                try
-                {
-                    tb_Teilung.Text = Math.Round(Pi * (float.Parse(txt_Modul.Text))).ToString();
-                }
-                catch
-                {
-
-                }
-
-                //Berechnung Zahnkopfhöhe ha
-                try
-                {
-                    tb_Zahnkopfhöhe.Text = (txt_Modul.Text).ToString();
-                }
-                catch
-                {
-
+                    MessageBox.Show("Fehler! Modul kann nur eine positive Zahl betragen.");
+                    av.Fehler = 1;
                 }
             }
-            ////////////////////////////////////////////////////////////////////////////////////////////////// Berechnung df und hf
-            ///////////////////////////////Kopfspiel standard
-            if (rtb_Standard.IsChecked == true)
+            else
             {
-                //Berechnung Zahnfußhöhe hf
-                try
-                {
-                    tb_Zahnfußhöhe.Text = (float.Parse(txt_Modul.Text) + c).ToString();
-                }
-                catch { }
-                
-                //Berechnung Fußkreisdurchmesser df
-                try
-                {
-                    tb_Fußkreisdurchmesser.Text = (float.Parse(tb_Teilkreisdurchmesser.Text) - (2 * (float.Parse(txt_Modul.Text)+c))).ToString();
-                }
-                catch { }
-            }
-            ///////////////////////////////////Kopfspiel 01
-            else if (rtb_0_1.IsChecked == true)
-            {
-                //Berechnung Zahnfußhöhe hf
-                try
-                {
-                    tb_Zahnfußhöhe.Text = (float.Parse(txt_Modul.Text) + ((float.Parse(txt_Modul.Text) * c1))).ToString();
-                }
-                catch { }
-
-                //Berechnung Fußkreisdurchmesser df
-                try
-                {
-                    tb_Fußkreisdurchmesser.Text = (float.Parse(tb_Teilkreisdurchmesser.Text) - (2 * (float.Parse(txt_Modul.Text) + (float.Parse(txt_Modul.Text) * c1)))).ToString();
-                }
-                catch { }
-            }
-            //////////////////////////Kopfspiel 03
-            else if (rtb_0_3.IsChecked == true)
-            {
-                //Berechnung Zahnfußhöhe hf
-                try
-                {
-                    tb_Zahnfußhöhe.Text = (float.Parse(txt_Modul.Text) + ((float.Parse(txt_Modul.Text) * c2))).ToString();
-                }
-                catch { }
-
-                //Berechnung Fußkreisdurchmesser df
-                try
-                {
-                    tb_Fußkreisdurchmesser.Text = (float.Parse(tb_Teilkreisdurchmesser.Text) - (2 * (float.Parse(txt_Modul.Text) + (float.Parse(txt_Modul.Text) * c2)))).ToString();
-                }
-                catch { }
+                MessageBox.Show("Fehler! Modul kann nur eine positive Zahl betragen.");
+                av.Fehler = 1;
             }
 
-
-///////////////////////////////////////////////////////////////////////////////////////////////// Gewicht und Preis
-
-            if (rtb_EN_GJL.IsChecked == true)
+            //Eingabecheck Zähnezahl
+            Zahlencheck = txt_Zähnezahl.Text;
+            if (Zahlenprüfung(Zahlencheck) == true)
             {
-                try
+                av.z = Convert.ToDouble(txt_Zähnezahl.Text);
+                if (av.z <= 0)
                 {
-                    tb_Gewicht.Text = Math.Round(dGJL * (float.Parse(txt_Dicke.Text) * ((float.Parse(tb_Teilkreisdurchmesser.Text) * (float.Parse(tb_Teilkreisdurchmesser.Text) * Pi)))) / 4).ToString();
+                    MessageBox.Show("Fehler! Zähnezahl kann nur eine positive Ganzzahl ab 5 betragen.");
+                    av.Fehler = 1;
                 }
-                catch
-                {
-
-                }
-
-                //Berechnung Preis
-                try
-                {
-                    tb_Preis.Text =((float.Parse(tb_Gewicht.Text)/1000) * PrdGjl).ToString();
-                }
-                catch
-                {
-
-                }
-
+            }
+            else
+            {
+                MessageBox.Show("Fehler! Zähnezahl kann nur eine positive Ganzzahl ab 5 betragen.");
+                av.Fehler = 1;
             }
 
-            else if (rtb_EN_GJS.IsChecked == true)
+            //Eingabecheck Dicke
+            Zahlencheck = txt_Dicke.Text;
+            if (Zahlenprüfung(Zahlencheck) == true)
             {
-                try
+                av.t = Convert.ToDouble(txt_Dicke.Text);
+                if (av.t <= 0)
                 {
-                    tb_Gewicht.Text = Math.Round(dGJS * (float.Parse(txt_Dicke.Text) * ((float.Parse(tb_Teilkreisdurchmesser.Text) * (float.Parse(tb_Teilkreisdurchmesser.Text) * Pi)))) / 4).ToString();
+                    MessageBox.Show("Fehler! Dicke kann nur eine positive Zahl betragen.");
+                    av.Fehler = 1;
                 }
-                catch
-                {
-
-                }
-
-                //Berechnung Preis
-                try
-                {
-                    tb_Preis.Text = ((float.Parse(tb_Gewicht.Text)/1000) * PrGjs).ToString();
-                }
-                catch
-                {
-
-                }
-
+            }
+            else
+            {
+                MessageBox.Show("Fehler! Dicke kann nur eine positive Zahl betragen.");
+                av.Fehler = 1;
             }
 
-            else if (rtb_S235JR.IsChecked == true)
+            if (av.Fehler == 0)
             {
-                try
-                {
-                    tb_Gewicht.Text = Math.Round(S235JR * (float.Parse(txt_Dicke.Text) * ((float.Parse(tb_Teilkreisdurchmesser.Text) * (float.Parse(tb_Teilkreisdurchmesser.Text) * Pi)))) / 4).ToString();
-                }
-                catch
-                {
-
-                }
-
-                //Berechnung Preis
-                try
-                {
-                    tb_Preis.Text = ((float.Parse(tb_Gewicht.Text)/1000) * PrS235).ToString();
-                }
-                catch
-                {
-
-                }
-
+                av.Berechnung();
+                 Lbl_Zahnhöhe.Content = Convert.ToString(av.h);
+                 lbl_Fußkreisdurchmesser.Content = Convert.ToString(av.df);
+                 lbl_Teilkreisdurchmesser.Content = Convert.ToString(av.d);
+                  lbl_Zahnfußhöhe.Content = Convert.ToString(av.hf);
+                      lbl_Zahnkopfhöhe.Content = Convert.ToString(av.ha);
+                  lbl_Teilung.Content = Convert.ToString(av.p);
+                   lbl_Kopfkreisdurchmesser.Content = Convert.ToString(av.da);
+                   lbl_Gewicht.Content = Convert.ToString(av.M);
+                   lbl_Preis.Content = Convert.ToString(av.Wert);
+            }
+            else
+            {
+                MessageBox.Show("Berechnung konnte nicht durchgeführt werden");
             }
 
 
         }
+
+
 
         private void btn_Zurück_Click(object sender, RoutedEventArgs e)
         {
-            txt_Modul.Text = "";
-            txt_Zähnezahl.Text = "";
-            txt_Dicke.Text = "";
-            lb_Werkstoffwahl.Content = "";
-            lb_Kopfspiele1.Content = "";
-            lb_Modul2.Content = "";
-            lb_Zähne.Content = "";
-            lb_Dicke1.Content = "";
-            tb_Teilkreisdurchmesser.Text = "";
-            tb_Kopfkreisdurchmesser.Text = "";
-            tb_Fußkreisdurchmesser.Text = "";
-            tb_Teilung.Text = "";
-            tb_Zahnkopfhöhe.Text = "";
-            tb_Zahnfußhöhe.Text = "";
-            tb_Gewicht.Text = "";
-            tb_Preis.Text = "";
+            Lbl_Zahnhöhe.Content = " ";
+            lbl_Fußkreisdurchmesser.Content = " ";
+            lbl_Teilkreisdurchmesser.Content = " ";
+            lbl_Zahnfußhöhe.Content = " ";
+            lbl_Zahnkopfhöhe.Content = " ";
+            lbl_Teilung.Content = " ";
+            lbl_Kopfkreisdurchmesser.Content = " ";
+            lbl_Gewicht.Content = " ";
+            lbl_Preis.Content = " ";
 
-            rtb_Standard.IsChecked = true;
-            rtb_EN_GJL.IsChecked = true;
+            S235JR.IsSelected = true;
+            Kopfspiel167.IsSelected = true;
         }
     }
+
+    
+
+
 }
 
       
