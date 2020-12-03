@@ -132,11 +132,15 @@ namespace GUI_Oberfläche_Zahnräder
                 case "Bitte wählen...":
                     break;
             }
-            
-            
+
+            //Eingabeparameter Anzeige
+            lb_Werkstoffwahl.Content = CB_Werkstoff.Text;
+            lb_Zähne.Content = txt_Zähnezahl.Text;
+            lb_Kopfspiele1.Content = CB_Kopfspiel.Text;
+            lb_Modul2.Content = txt_Modul.Text;
+            lb_Dicke1.Content = txt_Dicke.Text;
 
             //Eingabechecks
-
             //Eingabecheck Modul
             string Zahlencheck = txt_Modul.Text;
             if (Zahlenprüfung(Zahlencheck) == true)
@@ -194,12 +198,12 @@ namespace GUI_Oberfläche_Zahnräder
                  Lbl_Zahnhöhe.Content = Convert.ToString(av.h);
                  lbl_Fußkreisdurchmesser.Content = Convert.ToString(av.df);
                  lbl_Teilkreisdurchmesser.Content = Convert.ToString(av.d);
-                  lbl_Zahnfußhöhe.Content = Convert.ToString(av.hf);
-                      lbl_Zahnkopfhöhe.Content = Convert.ToString(av.ha);
-                  lbl_Teilung.Content = Convert.ToString(av.p);
-                   lbl_Kopfkreisdurchmesser.Content = Convert.ToString(av.da);
-                   lbl_Gewicht.Content = Convert.ToString(av.M);
-                   lbl_Preis.Content = Convert.ToString(av.Wert);
+                 lbl_Zahnfußhöhe.Content = Convert.ToString(av.hf);
+                 lbl_Zahnkopfhöhe.Content = Convert.ToString(av.ha);
+                 lbl_Teilung.Content = Convert.ToString(av.p);
+                 lbl_Kopfkreisdurchmesser.Content = Convert.ToString(av.da);
+                 lbl_Gewicht.Content = Convert.ToString(av.M);
+                 lbl_Preis.Content = Convert.ToString(av.Wert);
             }
             else
             {
@@ -213,6 +217,7 @@ namespace GUI_Oberfläche_Zahnräder
 
         private void btn_Zurück_Click(object sender, RoutedEventArgs e)
         {
+            //Felder leeren
             Lbl_Zahnhöhe.Content = " ";
             lbl_Fußkreisdurchmesser.Content = " ";
             lbl_Teilkreisdurchmesser.Content = " ";
@@ -222,7 +227,16 @@ namespace GUI_Oberfläche_Zahnräder
             lbl_Kopfkreisdurchmesser.Content = " ";
             lbl_Gewicht.Content = " ";
             lbl_Preis.Content = " ";
+            lb_Zähne.Content = " ";
+            lb_Modul2.Content = " ";
+            lb_Kopfspiele1.Content = " ";
+            lb_Werkstoffwahl.Content = " ";
+            lb_Dicke1.Content = " ";
+            txt_Modul.Text = " ";
+            txt_Zähnezahl.Text = " ";
+            txt_Dicke.Text = " ";
 
+            //ComboButton zurücksetzen
             S235JR.IsSelected = true;
             Kopfspiel167.IsSelected = true;
         }
