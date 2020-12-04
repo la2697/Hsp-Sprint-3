@@ -324,8 +324,8 @@
 
         <Image HorizontalAlignment="Right" Height="124" Margin="0,10,10,0" VerticalAlignment="Top" Width="276" Source="/Bilder/Jade Hochschule Logo.jpg"/>
         <Image Source="/Bilder/Firma.png" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="157" Margin="10,10,0,0"/>
-        <Grid HorizontalAlignment="Left" Height="175" Margin="26,160,0,0" VerticalAlignment="Top" Width="287" Background="#FF737687">
-            <Label x:Name="lb_Modul" Content="Modul:" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Margin="10,68,114,0" Height="30">
+        <Grid HorizontalAlignment="Left" Height="194" Margin="26,160,0,0" VerticalAlignment="Top" Width="287" Background="#FF737687">
+            <Label x:Name="lb_Modul" Content="Modul:" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Margin="10,69,10,0" Height="33">
                 <Label.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
@@ -341,7 +341,7 @@
                     </LinearGradientBrush>
                 </Label.Background>
             </Label>
-            <TextBox x:Name="txt_Modul" HorizontalAlignment="Left" Height="30" Margin="161,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109"  FontFamily="Arial" FontSize="20">
+            <TextBox x:Name="txt_Modul" HorizontalAlignment="Left" Height="33" Margin="161,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109"  FontFamily="Arial" FontSize="20">
                 <TextBox.BorderBrush>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
@@ -371,7 +371,7 @@
                     </LinearGradientBrush>
                 </TextBox.Background>
             </TextBox>
-            <Label x:Name="lb_Zähnezahl" Content="Zähnezahl:" Margin="10,101,114,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Height="30">
+            <Label x:Name="lb_Zähnezahl" Content="Zähnezahl:" Margin="10,109,10,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Height="33">
                 <Label.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
@@ -387,7 +387,7 @@
                     </LinearGradientBrush>
                 </Label.Background>
             </Label>
-            <TextBox x:Name="txt_Zähnezahl" HorizontalAlignment="Left" Height="30" Margin="161,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" FontFamily="Arial" FontSize="20">
+            <TextBox x:Name="txt_Zähnezahl" HorizontalAlignment="Left" Height="33" Margin="161,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" FontFamily="Arial" FontSize="20">
                 <TextBox.BorderBrush>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
@@ -417,7 +417,7 @@
                     </LinearGradientBrush>
                 </TextBox.Background>
             </TextBox>
-            <Label x:Name="lb_Dicke" Content="Dicke [mm]:" Margin="10,134,114,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Height="30">
+            <Label x:Name="lb_Dicke" Content="Dicke [mm]:" Margin="10,149,10,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Height="33">
                 <Label.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
@@ -433,7 +433,7 @@
                     </LinearGradientBrush>
                 </Label.Background>
             </Label>
-            <TextBox x:Name="txt_Dicke" HorizontalAlignment="Left" Height="30" Margin="161,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" RenderTransformOrigin="0.444,2.03" FontFamily="Arial" FontSize="20">
+            <TextBox x:Name="txt_Dicke" HorizontalAlignment="Left" Height="33" Margin="161,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" RenderTransformOrigin="0.444,2.03" FontFamily="Arial" FontSize="20">
                 <TextBox.BorderBrush>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
@@ -523,7 +523,7 @@
                     </LinearGradientBrush>
                 </Label.Background>
             </Label>
-            <Grid x:Name="gr_Schräg" Width="300" Height="195" Margin="0,63,7,0" VerticalAlignment="Top" HorizontalAlignment="Right" Opacity="0.5">
+            <Grid x:Name="gr_Schräg" Width="300" Height="195" Margin="0,63,7,0" VerticalAlignment="Top" HorizontalAlignment="Right">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="27*"/>
                     <ColumnDefinition Width="274*"/>
@@ -542,8 +542,8 @@
                         <GradientStop Color="#FFE8E8E8" Offset="1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <Image x:Name="Im_Schräg" Height="132" Margin="61.5,53,0,0" VerticalAlignment="Top" Source="/Bilder/Stirnrad SV.PNG" HorizontalAlignment="Left" Width="133" Opacity="0.5" Grid.Column="1"/>
-                <RadioButton IsChecked="{x:Null}" GroupName="Wähle ein Zahnrad" x:Name="rtb_Schräg" Content="Stirnrad schrägverzahnt (auf Anfrage)" Margin="5,10,5,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="18" Height="27" Opacity="0.5" Grid.ColumnSpan="2"/>
+                <Image x:Name="Im_Schräg" Height="132" Margin="61.5,53,0,0" VerticalAlignment="Top" Source="/Bilder/Stirnrad SV.PNG" HorizontalAlignment="Left" Width="133" Grid.Column="1"/>
+                <RadioButton  GroupName="Wähle ein Zahnrad" x:Name="rtb_Schräg" Content="Stirnrad schrägverzahnt (auf Anfrage)" Margin="5,10,5,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="18" Height="27" Grid.ColumnSpan="2"/>
             </Grid>
             <Grid x:Name="gr_Kegelrad" HorizontalAlignment="Left" Height="195" Margin="10,263,0,0" VerticalAlignment="Top" Width="300" Opacity="0.5">
                 <Grid.Background>
@@ -571,7 +571,7 @@
                 <Image x:Name="Im_Kegelrad" HorizontalAlignment="Left" Margin="100,47,0,0" Width="119" Source="/Bilder/Kegelrad.PNG" RenderTransformOrigin="-1.075,0.14" Height="140" VerticalAlignment="Top" Opacity="0.5" Grid.RowSpan="2"/>
                 <RadioButton IsChecked="{x:Null}" GroupName="Wähle ein Zahnrad"  x:Name="rtb_Kegelrad" Content="Kegelzahnrad (auf Anfrage)" VerticalAlignment="Top" FontFamily="Calibri" FontSize="18" Margin="40,10,10,0" Opacity="0.5"/>
             </Grid>
-            <Grid x:Name="gr_Innenzahnrad" HorizontalAlignment="Left" Height="195" Margin="315,263,0,0" VerticalAlignment="Top" Width="300" Opacity="0.5">
+            <Grid x:Name="gr_Innenzahnrad" HorizontalAlignment="Left" Height="195" Margin="315,263,0,0" VerticalAlignment="Top" Width="300">
                 <Grid.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
@@ -586,12 +586,12 @@
                         <GradientStop Color="#FFE8E8E8" Offset="1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <Image  x:Name="Im_Innenzahnrad" HorizontalAlignment="Left" Height="134" Margin="86,49,0,0" VerticalAlignment="Top" Width="131" Source="/Bilder/Innenrad.PNG" Opacity="0.5"/>
-                <RadioButton IsChecked="{x:Null}" GroupName="Wähle ein Zahnrad" x:Name="rtb_Innenzahnrad" Content="Innenzahnrad (auf Anfrage)" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="18" Margin="40,10,0,0" Opacity="0.5"/>
+                <Image  x:Name="Im_Innenzahnrad" HorizontalAlignment="Left" Height="134" Margin="86,49,0,0" VerticalAlignment="Top" Width="131" Source="/Bilder/Innenrad.PNG"/>
+                <RadioButton GroupName="Wähle ein Zahnrad" x:Name="rtb_Innenzahnrad" Content="Innenzahnrad (auf Anfrage)" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="18" Margin="40,10,0,0"/>
             </Grid>
         </Grid>
         <Label Content="Zahnrad Zar GmbH und Co. KG" HorizontalAlignment="Center" Margin="270,35,318,0" VerticalAlignment="Top" Height="83" Width="806" FontSize="60" FontWeight="Bold" FontFamily="Yu Gothic UI Light"/>
-        <Grid HorizontalAlignment="Left" Height="131" Margin="26,500,0,0" VerticalAlignment="Top" Width="287" Background="#FF737687">
+        <Grid HorizontalAlignment="Left" Height="115" Margin="26,515,0,0" VerticalAlignment="Top" Width="287" Background="#FF737687">
             <Label Content="Wähle ein Kopfspiel:" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="24" Margin="10,10,0,0" Width="267" FontWeight="Bold">
                 <Label.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -609,13 +609,13 @@
                 </Label.Background>
             </Label>
 
-            <ComboBox x:Name="CB_Kopfspiel" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="246" Height="31" FontFamily="Calibri" FontSize="20">
+            <ComboBox x:Name="CB_Kopfspiel" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="267" Height="31" FontFamily="Calibri" FontSize="20">
                 <ComboBoxItem x:Name="Kopfspiel167" IsSelected="True" >0,167</ComboBoxItem>
                 <ComboBoxItem x:Name="Kopfspiel01"  >0,1</ComboBoxItem>
                 <ComboBoxItem x:Name="Kopfspiel02"  >0,3</ComboBoxItem>
             </ComboBox>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="136" Margin="26,350,0,0" VerticalAlignment="Top" Width="287" Background="#FF737687">
+        <Grid HorizontalAlignment="Left" Height="119" Margin="26,375,0,0" VerticalAlignment="Top" Width="287" Background="#FF737687">
             <Label HorizontalAlignment="Left"  VerticalAlignment="Top" FontFamily="Calibri" FontSize="24" Width="267" Content="Wähle ein Werkstoff:" Margin="10,10,0,0" FontWeight="Bold" >
                 <Label.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -633,7 +633,7 @@
                 </Label.Background>
             </Label>
 
-            <ComboBox x:Name="CB_Werkstoff" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="248" Height="29" FontSize="20" FontFamily="Calibri">
+            <ComboBox x:Name="CB_Werkstoff" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="267" Height="35" FontSize="20" FontFamily="Calibri">
                 <ComboBoxItem x:Name="S235JR" IsSelected="true" >S235JR</ComboBoxItem>
                 <ComboBoxItem x:Name="GJS"  >GJS</ComboBoxItem>
                 <ComboBoxItem x:Name="GJL"  >GJL</ComboBoxItem>
@@ -821,7 +821,7 @@
                 </Label.Background>
             </Label>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="65" Margin="403,660,0,0" VerticalAlignment="Top" Width="478" Background="#FF737687">
+        <Grid HorizontalAlignment="Left" Height="144" Margin="26,660,0,0" VerticalAlignment="Top" Width="924" Background="#FF737687">
             <Button Click="btn_Zurück_Click" x:Name="btn_Zurück" Content="Zurücksetzen" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="220" Height="45" FontFamily="Arial" FontSize="20" FontWeight="Bold" FontStyle="Italic">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -838,7 +838,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button Click="btn_Bestätigen_Click" x:Name="btn_Bestätigen" Content="Bestätigen" HorizontalAlignment="Left" Margin="249,10,0,0" VerticalAlignment="Top" Width="219" Height="45" FontFamily="Arial" FontSize="20" FontWeight="Bold" FontStyle="Italic">
+            <Button Click="btn_Bestätigen_Click" x:Name="btn_Bestätigen" Content="Bestätigen" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Width="219" Height="45" FontFamily="Arial" FontSize="20" FontWeight="Bold" FontStyle="Italic">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
@@ -854,6 +854,9 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
+            <Button Click="Button_Click_1" Content="Programm schließen" HorizontalAlignment="Left" Margin="694,88,0,0" VerticalAlignment="Top" Width="220" Height="43" FontFamily="Calibri" FontSize="20" FontStyle="Italic" FontWeight="Bold"/>
+            <Button Click="Button_Click" Content="Info Zahnradparameter" HorizontalAlignment="Left" Margin="694,12,0,0" VerticalAlignment="Top" Width="220" Height="45" FontFamily="Calibri" FontSize="20" FontStyle="Italic" FontWeight="Bold"/>
+            <Button Click="Button_Click_2" Content="3D-Modell erstellen" HorizontalAlignment="Left" Margin="364,55,0,0" VerticalAlignment="Top" Width="208" Height="52" FontFamily="Calibri" FontSize="20" FontStyle="Italic" FontWeight="Bold"/>
         </Grid>
         <Label x:Name="lb_Geschäftsführer" Content="Geschäftsführer Kai Mecke" Margin="10,105,1203,737" FontSize="14"/>
 

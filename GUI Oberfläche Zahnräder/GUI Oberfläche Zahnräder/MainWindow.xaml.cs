@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
+
 namespace GUI_Oberfläche_Zahnräder
 {
     /// <summary>
@@ -104,6 +106,73 @@ namespace GUI_Oberfläche_Zahnräder
 
         }
 
+        public class Innenverzahnung
+        {
+            //Eingabevariablen
+            public double m;                            //Modul
+            public double c;                            //Kopfspiel Standard
+            public double d;                            //Teilkreisdurchmesser
+            public double z;                            //Zähnezahl
+            public double t;                            //Werkstoffdicke
+
+
+            //Help
+            public int Fehler;
+
+            //Werkstoffangaben
+            public double Preis_S235JR = 3.63;          //Preis S235JR
+            public double Preis_GJL = 0.80;             //Preis GJL
+            public double Preis_GJS = 1.10;             //Preis GJS
+
+
+            //Ausgabevariablen
+            public double h;                            //Zahnhöhe
+            public double ha;                           //Zahnkopfhöhe
+            public double hf;                           //Zahnfußhöhe
+            public double df;                           //Fußkreisdurchmesser
+            public double da;                           //Kopfkreisdurchmesser
+            public double p;                            //Teilung
+            public double material;                     //Materialdichte g/cm3
+            public double preis;                        //Preis pro kg
+            public double A;                            //Flächeninhalt mm2
+            public double V;                            //Volumen mm3
+            public double M;                            //Masse g
+            public double Wert;                         //Preis
+            public double dm;                           //Mittlerer Durchmesser
+
+            public void Berechnung()
+            {
+                //Formeln
+                d = m * z;
+                h = (2 * m) + c;
+                p = Math.PI * m;
+                da = d - (2 * m);
+                ha = m;
+                hf = m + c;
+                df = d + 2 * (m + c);
+                dm = d * 1.4;
+                A = ((Math.PI * ((dm * dm)-(da * da)) / 4) - (Math.PI * m * h * z) / 2);
+                V = A * t;
+                M = V * 1 / 1000 * material;
+                Wert = M * 1 / 1000 * preis;
+
+                //Rundung
+                d = Math.Round(d, 2);
+                dm = Math.Round(dm, 2);
+                p = Math.Round(p, 2);
+                h = Math.Round(h, 2);
+                da = Math.Round(da, 2);
+                ha = Math.Round(ha, 2);
+                df = Math.Round(df, 2);
+                A = Math.Round(A, 2);
+                V = Math.Round(V, 2);
+                M = Math.Round(M, 2);
+                Wert = Math.Round(Wert, 2);
+            }
+
+        }
+
+
         public MainWindow()
         {
 
@@ -111,6 +180,7 @@ namespace GUI_Oberfläche_Zahnräder
 
         public void btn_Bestätigen_Click(object sender, RoutedEventArgs e)
         {
+            //Außenverzahnung
             Außenverzahnung av = new Außenverzahnung();
             switch (CB_Werkstoff.Text)
             {
@@ -139,6 +209,38 @@ namespace GUI_Oberfläche_Zahnräder
             lb_Kopfspiele1.Content = CB_Kopfspiel.Text;
             lb_Modul2.Content = txt_Modul.Text;
             lb_Dicke1.Content = txt_Dicke.Text;
+
+
+            //Innenverzahung
+            Innenverzahnung iv = new Innenverzahnung();
+            switch (CB_Werkstoff.Text)
+            {
+                case "GJL":
+                    iv.material = 7.15;
+                    iv.preis = 0.80;
+                    break;
+
+                case "GJS":
+                    iv.material = 7.1;
+                    iv.preis = 1.10;
+                    break;
+
+                case "S235JR":
+                    iv.material = 7.85;
+                    iv.preis = 3.63;
+                    break;
+
+                case "Bitte wählen...":
+                    break;
+            }
+
+            //Eingabeparameter Anzeige
+            lb_Werkstoffwahl.Content = CB_Werkstoff.Text;
+            lb_Zähne.Content = txt_Zähnezahl.Text;
+            lb_Kopfspiele1.Content = CB_Kopfspiel.Text;
+            lb_Modul2.Content = txt_Modul.Text;
+            lb_Dicke1.Content = txt_Dicke.Text;
+
 
             //Eingabechecks
             //Eingabecheck Modul
@@ -192,7 +294,7 @@ namespace GUI_Oberfläche_Zahnräder
                 av.Fehler = 1;
             }
 
-            if (av.Fehler == 0)
+            if (av.Fehler == 0 && rtb_Gerad.IsChecked == true)
             {
                 av.Berechnung();
                  Lbl_Zahnhöhe.Content = Convert.ToString(av.h);
@@ -207,13 +309,33 @@ namespace GUI_Oberfläche_Zahnräder
             }
             else
             {
+                if (iv.Fehler == 0 && rtb_Innenzahnrad.IsChecked == true)
+                {
+                    iv.Berechnung();
+                    Lbl_Zahnhöhe.Content = Convert.ToString(iv.h);
+                    lbl_Fußkreisdurchmesser.Content = Convert.ToString(iv.df);
+                    lbl_Teilkreisdurchmesser.Content = Convert.ToString(iv.d);
+                    lbl_Zahnfußhöhe.Content = Convert.ToString(iv.hf);
+                    lbl_Zahnkopfhöhe.Content = Convert.ToString(iv.ha);
+                    lbl_Teilung.Content = Convert.ToString(iv.p);
+                    lbl_Kopfkreisdurchmesser.Content = Convert.ToString(iv.da);
+                    lbl_Gewicht.Content = Convert.ToString(iv.M);
+                    lbl_Preis.Content = Convert.ToString(iv.Wert);
+                }
                 MessageBox.Show("Berechnung konnte nicht durchgeführt werden");
             }
 
+         
+
 
         }
+    
 
+        
 
+        
+        
+            
 
         private void btn_Zurück_Click(object sender, RoutedEventArgs e)
         {
@@ -240,12 +362,88 @@ namespace GUI_Oberfläche_Zahnräder
             S235JR.IsSelected = true;
             Kopfspiel167.IsSelected = true;
         }
+
+
+        //Info Zahnradparameter
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            GUI_Oberfläche_Zahnräder.Window1 Infofenster = new Window1();
+            Infofenster.Show();
+        }
+        //Programm schließen
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+        //Catia Part erstellen
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            CatiaControl();
+        }
+
+        // // // // // // // // // // // // // // // //
+        
+        //CatiaControl
+        
+        
+            private void CatiaControl()
+            {
+                try
+                {
+
+                    CatiaConnection cc = new CatiaConnection();
+
+                    // Finde Catia Prozess
+                    if (cc.CATIALaeuft())
+                    {
+                        Console.WriteLine("0");
+
+                        // Öffne ein neues Part
+                        cc.ErzeugePart();
+                        Console.WriteLine("1");
+
+                        // Erstelle eine Skizze
+                        cc.ErstelleLeereSkizze();
+                        Console.WriteLine("2");
+
+                        // Generiere ein Profil
+                        cc.ErzeugeProfil(20, 10);
+                        Console.WriteLine("3");
+
+                        // Extrudiere Balken
+                        cc.ErzeugeBalken(300);
+                        Console.WriteLine("4");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Laufende Catia Application nicht gefunden");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Exception aufgetreten");
+                }
+                Console.WriteLine("Fertig - Taste drücken.");
+                
+            }
+
+            
+        
+
+       
+
+
+
     }
+
+
+}
+
 
     
 
 
-}
+
 
       
 
