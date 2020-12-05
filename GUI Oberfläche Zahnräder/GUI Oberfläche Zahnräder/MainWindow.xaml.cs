@@ -181,135 +181,222 @@ namespace GUI_Oberfläche_Zahnräder
         public void btn_Bestätigen_Click(object sender, RoutedEventArgs e)
         {
             //Außenverzahnung
-            Außenverzahnung av = new Außenverzahnung();
-            switch (CB_Werkstoff.Text)
+           
+            if (rtb_Gerad.IsChecked == true)
             {
-                case "GJL":
-                    av.material = 7.15;
-                    av.preis = 0.80;
-                    break;
+                Außenverzahnung av = new Außenverzahnung();  
+                switch (CB_Werkstoff.Text)
+                {
+                    case "GJL":
+                        av.material = 7.15;
+                        av.preis = 0.80;
+                        break;
 
-                case "GJS":
-                    av.material = 7.1;
-                    av.preis = 1.10;
-                    break;
+                    case "GJS":
+                        av.material = 7.1;
+                        av.preis = 1.10;
+                        break;
 
-                case "S235JR":
-                    av.material = 7.85;
-                    av.preis = 3.63;
-                    break;
+                    case "S235JR":
+                        av.material = 7.85;
+                        av.preis = 3.63;
+                        break;
+                }
 
-                case "Bitte wählen...":
-                    break;
-            }
+                //Eingabeparameter Anzeige
+                lb_Werkstoffwahl.Content = CB_Werkstoff.Text;
+                lb_Zähne.Content = txt_Zähnezahl.Text;
+                lb_Kopfspiele1.Content = TB_0167.Text;
+                lb_Modul2.Content = txt_Modul.Text;
+                lb_Dicke1.Content = txt_Dicke.Text;
 
-            //Eingabeparameter Anzeige
-            lb_Werkstoffwahl.Content = CB_Werkstoff.Text;
-            lb_Zähne.Content = txt_Zähnezahl.Text;
-            lb_Kopfspiele1.Content = CB_Kopfspiel.Text;
-            lb_Modul2.Content = txt_Modul.Text;
-            lb_Dicke1.Content = txt_Dicke.Text;
-
-
-            //Innenverzahung
-            Innenverzahnung iv = new Innenverzahnung();
-            switch (CB_Werkstoff.Text)
-            {
-                case "GJL":
-                    iv.material = 7.15;
-                    iv.preis = 0.80;
-                    break;
-
-                case "GJS":
-                    iv.material = 7.1;
-                    iv.preis = 1.10;
-                    break;
-
-                case "S235JR":
-                    iv.material = 7.85;
-                    iv.preis = 3.63;
-                    break;
-
-                case "Bitte wählen...":
-                    break;
-            }
-
-            //Eingabeparameter Anzeige
-            lb_Werkstoffwahl.Content = CB_Werkstoff.Text;
-            lb_Zähne.Content = txt_Zähnezahl.Text;
-            lb_Kopfspiele1.Content = CB_Kopfspiel.Text;
-            lb_Modul2.Content = txt_Modul.Text;
-            lb_Dicke1.Content = txt_Dicke.Text;
-
-
-            //Eingabechecks
-            //Eingabecheck Modul
-            string Zahlencheck = txt_Modul.Text;
-            if (Zahlenprüfung(Zahlencheck) == true)
-            {
-                av.m = Convert.ToDouble(txt_Modul.Text);
-                if (av.m <= 0)
+             
+                //Eingabechecks
+                //Eingabecheck Modul
+                string Zahlencheck = txt_Modul.Text;
+                if (Zahlenprüfung(Zahlencheck) == true)
+                {
+                    av.m = Convert.ToDouble(txt_Modul.Text);
+                    if (av.m <= 0)
+                    {
+                        MessageBox.Show("Fehler! Modul kann nur eine positive Zahl betragen.");
+                        av.Fehler = 1;
+                    }
+                }
+                else
                 {
                     MessageBox.Show("Fehler! Modul kann nur eine positive Zahl betragen.");
                     av.Fehler = 1;
                 }
-            }
-            else
-            {
-                MessageBox.Show("Fehler! Modul kann nur eine positive Zahl betragen.");
-                av.Fehler = 1;
-            }
 
-            //Eingabecheck Zähnezahl
-            Zahlencheck = txt_Zähnezahl.Text;
-            if (Zahlenprüfung(Zahlencheck) == true)
-            {
-                av.z = Convert.ToDouble(txt_Zähnezahl.Text);
-                if (av.z <= 0)
+                //Kopfspiel
+                Zahlencheck = TB_0167.Text;
+                if (Zahlenprüfung(Zahlencheck) == true)
+                {
+                    av.c = Convert.ToDouble(TB_0167.Text);
+                    if (av.c <= 0)
+                    {
+                        MessageBox.Show("Fehler! Kopfspiel kann nur eine positive Zahl betragen.");
+                        av.Fehler = 1;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Fehler! Kopfspiel kann nur eine positive Zahl betragen.");
+                    av.Fehler = 1;
+                }
+
+
+                //Eingabecheck Zähnezahl
+                Zahlencheck = txt_Zähnezahl.Text;
+                if (Zahlenprüfung(Zahlencheck) == true)
+                {
+                    av.z = Convert.ToDouble(txt_Zähnezahl.Text);
+                    if (av.z <= 0)
+                    {
+                        MessageBox.Show("Fehler! Zähnezahl kann nur eine positive Ganzzahl ab 5 betragen.");
+                        av.Fehler = 1;
+                    }
+                }
+                else
                 {
                     MessageBox.Show("Fehler! Zähnezahl kann nur eine positive Ganzzahl ab 5 betragen.");
                     av.Fehler = 1;
                 }
-            }
-            else
-            {
-                MessageBox.Show("Fehler! Zähnezahl kann nur eine positive Ganzzahl ab 5 betragen.");
-                av.Fehler = 1;
-            }
 
-            //Eingabecheck Dicke
-            Zahlencheck = txt_Dicke.Text;
-            if (Zahlenprüfung(Zahlencheck) == true)
-            {
-                av.t = Convert.ToDouble(txt_Dicke.Text);
-                if (av.t <= 0)
+                //Eingabecheck Dicke
+                Zahlencheck = txt_Dicke.Text;
+                if (Zahlenprüfung(Zahlencheck) == true)
+                {
+                    av.t = Convert.ToDouble(txt_Dicke.Text);
+                    if (av.t <= 0)
+                    {
+                        MessageBox.Show("Fehler! Dicke kann nur eine positive Zahl betragen.");
+                        av.Fehler = 1;
+                    }
+                }
+                else
                 {
                     MessageBox.Show("Fehler! Dicke kann nur eine positive Zahl betragen.");
                     av.Fehler = 1;
                 }
-            }
-            else
-            {
-                MessageBox.Show("Fehler! Dicke kann nur eine positive Zahl betragen.");
-                av.Fehler = 1;
+
+                //Berechnung durchführen
+                if (av.Fehler == 0)
+                {
+                    av.Berechnung();
+                    Lbl_Zahnhöhe.Content = Convert.ToString(av.h);
+                    lbl_Fußkreisdurchmesser.Content = Convert.ToString(av.df);
+                    lbl_Teilkreisdurchmesser.Content = Convert.ToString(av.d);
+                    lbl_Zahnfußhöhe.Content = Convert.ToString(av.hf);
+                    lbl_Zahnkopfhöhe.Content = Convert.ToString(av.ha);
+                    lbl_Teilung.Content = Convert.ToString(av.p);
+                    lbl_Kopfkreisdurchmesser.Content = Convert.ToString(av.da);
+                    lbl_Gewicht.Content = Convert.ToString(av.M);
+                    lbl_Preis.Content = Convert.ToString(av.Wert);
+                    MessageBox.Show(Convert.ToString(av.c));
+                }
             }
 
-            if (av.Fehler == 0 && rtb_Gerad.IsChecked == true)
-            {
-                av.Berechnung();
-                 Lbl_Zahnhöhe.Content = Convert.ToString(av.h);
-                 lbl_Fußkreisdurchmesser.Content = Convert.ToString(av.df);
-                 lbl_Teilkreisdurchmesser.Content = Convert.ToString(av.d);
-                 lbl_Zahnfußhöhe.Content = Convert.ToString(av.hf);
-                 lbl_Zahnkopfhöhe.Content = Convert.ToString(av.ha);
-                 lbl_Teilung.Content = Convert.ToString(av.p);
-                 lbl_Kopfkreisdurchmesser.Content = Convert.ToString(av.da);
-                 lbl_Gewicht.Content = Convert.ToString(av.M);
-                 lbl_Preis.Content = Convert.ToString(av.Wert);
-            }
+            //Innenverzahung
             else
             {
-                if (iv.Fehler == 0 && rtb_Innenzahnrad.IsChecked == true)
+                Innenverzahnung iv = new Innenverzahnung();
+                switch (CB_Werkstoff.Text)
+                {
+                    case "GJL":
+                        iv.material = 7.15;
+                        iv.preis = 0.80;
+                        break;
+
+                    case "GJS":
+                        iv.material = 7.1;
+                        iv.preis = 1.10;
+                        break;
+
+                    case "S235JR":
+                        iv.material = 7.85;
+                        iv.preis = 3.63;
+                        break;
+                }
+
+                //Eingabeparameter Anzeige
+                lb_Werkstoffwahl.Content = CB_Werkstoff.Text;
+                lb_Zähne.Content = txt_Zähnezahl.Text;
+                lb_Kopfspiele1.Content = TB_0167.Text;
+                lb_Modul2.Content = txt_Modul.Text;
+                lb_Dicke1.Content = txt_Dicke.Text;
+
+                //Eingabechecks
+                //Modul
+                string Zahlencheck = txt_Modul.Text;
+                if (Zahlenprüfung(Zahlencheck) == true)
+                {
+                    iv.m = Convert.ToDouble(txt_Modul.Text);
+                    if (iv.m <= 0)
+                    {
+                        MessageBox.Show("Fehler! Modul kann nur eine positive Zahl betragen.");
+                        iv.Fehler = 1;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Fehler! Modul kann nur eine positive Zahl betragen.");
+                    iv.Fehler = 1;
+                }
+
+                //Zähnezahl
+                Zahlencheck = txt_Zähnezahl.Text;
+                if (Zahlenprüfung(Zahlencheck) == true)
+                {
+                    iv.z = Convert.ToDouble(txt_Zähnezahl.Text);
+                    if (iv.z <= 0)
+                    {
+                        MessageBox.Show("Fehler! Zähnezahl kann nur eine positive Ganzzahl ab 5 betragen.");
+                        iv.Fehler = 1;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Fehler! Zähnezahl kann nur eine positive Ganzzahl ab 5 betragen.");
+                    iv.Fehler = 1;
+                }
+
+                //Eingabecheck Dicke
+                Zahlencheck = txt_Dicke.Text;
+                if (Zahlenprüfung(Zahlencheck) == true)
+                {
+                    iv.t = Convert.ToDouble(txt_Dicke.Text);
+                    if (iv.t <= 0)
+                    {
+                        MessageBox.Show("Fehler! Dicke kann nur eine positive Zahl betragen.");
+                        iv.Fehler = 1;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Fehler! Dicke kann nur eine positive Zahl betragen.");
+                    iv.Fehler = 1;
+                }
+
+                //Kopfspiel
+                Zahlencheck = TB_0167.Text;
+                if (Zahlenprüfung(Zahlencheck) == true)
+                {
+                    iv.c = Convert.ToDouble(TB_0167.Text);
+                    if (iv.c < 0.1 || > 0.3)
+                    {
+                        MessageBox.Show("Fehler! Kopfspiel kann nur eine positive Zahl betragen.");
+                        iv.Fehler = 1;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Fehler! Kopfspiel kann nur eine positive Zahl betragen.");
+                    iv.Fehler = 1;
+                }
+
+                if (iv.Fehler == 0)
                 {
                     iv.Berechnung();
                     Lbl_Zahnhöhe.Content = Convert.ToString(iv.h);
@@ -322,10 +409,8 @@ namespace GUI_Oberfläche_Zahnräder
                     lbl_Gewicht.Content = Convert.ToString(iv.M);
                     lbl_Preis.Content = Convert.ToString(iv.Wert);
                 }
-                MessageBox.Show("Berechnung konnte nicht durchgeführt werden");
             }
-
-         
+          
 
 
         }
@@ -358,9 +443,13 @@ namespace GUI_Oberfläche_Zahnräder
             txt_Zähnezahl.Text = " ";
             txt_Dicke.Text = " ";
 
-            //ComboButton zurücksetzen
+            //ComboButton und RadioButton zurücksetzen
             S235JR.IsSelected = true;
-            Kopfspiel167.IsSelected = true;
+            rtb_Gerad.IsChecked = true;
+            TB_0167.Text = "0,167";
+            TB_0167.IsEnabled = false;
+            CB_Kopfspiel.IsChecked = false;
+            
         }
 
 
@@ -370,11 +459,13 @@ namespace GUI_Oberfläche_Zahnräder
             GUI_Oberfläche_Zahnräder.Window1 Infofenster = new Window1();
             Infofenster.Show();
         }
+
         //Programm schließen
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Close();
         }
+
         //Catia Part erstellen
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
@@ -427,13 +518,17 @@ namespace GUI_Oberfläche_Zahnräder
                 
             }
 
-            
-        
+        private void CB_Kopfspiel_Checked(object sender, RoutedEventArgs e)
+        {
+            TB_0167.IsEnabled = true;
+            TB_0167.Clear();
+        }
 
-       
-
-
-
+        private void CB_Kopfspiel_Unchecked(object sender, RoutedEventArgs e)
+        {
+            TB_0167.IsEnabled = false;
+            TB_0167.Text = "0,167";
+        }
     }
 
 

@@ -13,7 +13,7 @@
                 <ColumnDefinition Width="1071*"/>
                 <ColumnDefinition Width="298*"/>
             </Grid.ColumnDefinitions>
-            <Image Source="/Bilder/Zahnrad Hintergrund.jpg" VerticalAlignment="Top" HorizontalAlignment="Left" Opacity="0.9" Margin="10,0,-10,-128" Height="719" Width="1369" Grid.ColumnSpan="2"/>
+            <Image Source="/Bilder/Zahnrad Hintergrund.jpg" VerticalAlignment="Top" HorizontalAlignment="Left" Opacity="0.9" Margin="10,0,-10,-125" Height="716" Width="1369" Grid.ColumnSpan="2"/>
             <Grid HorizontalAlignment="Left" Height="416" Margin="969,271,0,-96" VerticalAlignment="Top" Width="400" Background="#FF737687" Grid.ColumnSpan="2">
                 <Label x:Name="lb_Preis" Content="Preis [€]:" HorizontalAlignment="Left" Margin="10,369,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="19" Width="380" Height="33">
                     <Label.Background>
@@ -322,8 +322,8 @@
             </Grid>
         </Grid>
 
-        <Image HorizontalAlignment="Right" Height="124" Margin="0,10,10,0" VerticalAlignment="Top" Width="276" Source="/Bilder/Jade Hochschule Logo.jpg"/>
-        <Image Source="/Bilder/Firma.png" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="157" Margin="10,10,0,0"/>
+        <Image HorizontalAlignment="Right" Height="119" Margin="0,10,10,0" VerticalAlignment="Top" Width="258" Source="/Bilder/Jade Hochschule Logo.jpg"/>
+        <Image Source="/Bilder/Firma.png" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="156" Margin="10,10,0,0"/>
         <Grid HorizontalAlignment="Left" Height="194" Margin="26,160,0,0" VerticalAlignment="Top" Width="287" Background="#FF737687">
             <Label x:Name="lb_Modul" Content="Modul:" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Margin="10,69,10,0" Height="33">
                 <Label.Background>
@@ -507,7 +507,7 @@
                 <RadioButton IsChecked="True" GroupName="Wähle ein Zahnrad" x:Name="rtb_Gerad" Content="Stirnzahnrad" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="18" Margin="89,10,0,0"/>
                 <Image x:Name="Im_Gerad" HorizontalAlignment="Left" Height="126" Margin="89,50,0,0" VerticalAlignment="Top" Width="127" Source="/Bilder/Stirnrad.PNG" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
             </Grid>
-            <Label Content="Wähle ein Zahnradtyp:" VerticalAlignment="Top" FontSize="24" FontFamily="Calibri" Foreground="Black" AutomationProperties.IsOffscreenBehavior="Onscreen" HorizontalAlignment="Right" Width="602" Height="39" Margin="0,10,10,0" FontWeight="Bold">
+            <Label Content="Wähle ein Zahnradtyp:" VerticalAlignment="Top" FontSize="24" FontFamily="Calibri" Foreground="Black" AutomationProperties.IsOffscreenBehavior="Onscreen" HorizontalAlignment="Right" Width="605" Height="39" Margin="0,10,7,0" FontWeight="Bold">
                 <Label.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
@@ -523,7 +523,7 @@
                     </LinearGradientBrush>
                 </Label.Background>
             </Label>
-            <Grid x:Name="gr_Schräg" Width="300" Height="195" Margin="0,63,7,0" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <Grid x:Name="gr_Schräg" Width="300" Height="195" Margin="0,63,7,0" VerticalAlignment="Top" HorizontalAlignment="Right" Opacity="0.5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="27*"/>
                     <ColumnDefinition Width="274*"/>
@@ -542,8 +542,8 @@
                         <GradientStop Color="#FFE8E8E8" Offset="1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <Image x:Name="Im_Schräg" Height="132" Margin="61.5,53,0,0" VerticalAlignment="Top" Source="/Bilder/Stirnrad SV.PNG" HorizontalAlignment="Left" Width="133" Grid.Column="1"/>
-                <RadioButton  GroupName="Wähle ein Zahnrad" x:Name="rtb_Schräg" Content="Stirnrad schrägverzahnt (auf Anfrage)" Margin="5,10,5,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="18" Height="27" Grid.ColumnSpan="2"/>
+                <Image x:Name="Im_Schräg" Height="132" Margin="61.5,53,0,0" VerticalAlignment="Top" Source="/Bilder/Stirnrad SV.PNG" HorizontalAlignment="Left" Width="133" Grid.Column="1" Opacity="0.5"/>
+                <RadioButton IsEnabled="False" GroupName="Wähle ein Zahnrad" x:Name="rtb_Schräg" Content="Stirnrad schrägverzahnt (auf Anfrage)" Margin="5,10,5,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="18" Height="27" Grid.ColumnSpan="2" Opacity="0.5"/>
             </Grid>
             <Grid x:Name="gr_Kegelrad" HorizontalAlignment="Left" Height="195" Margin="10,263,0,0" VerticalAlignment="Top" Width="300" Opacity="0.5">
                 <Grid.Background>
@@ -568,8 +568,8 @@
                     <RowDefinition Height="57*"/>
                     <RowDefinition Height="151*"/>
                 </Grid.RowDefinitions>
-                <Image x:Name="Im_Kegelrad" HorizontalAlignment="Left" Margin="100,47,0,0" Width="119" Source="/Bilder/Kegelrad.PNG" RenderTransformOrigin="-1.075,0.14" Height="140" VerticalAlignment="Top" Opacity="0.5" Grid.RowSpan="2"/>
-                <RadioButton IsChecked="{x:Null}" GroupName="Wähle ein Zahnrad"  x:Name="rtb_Kegelrad" Content="Kegelzahnrad (auf Anfrage)" VerticalAlignment="Top" FontFamily="Calibri" FontSize="18" Margin="40,10,10,0" Opacity="0.5"/>
+                <Image x:Name="Im_Kegelrad" HorizontalAlignment="Left" Margin="100,47,0,0" Width="119" Source="/Bilder/Kegelrad.PNG" RenderTransformOrigin="-1.075,0.14" Height="140" VerticalAlignment="Top" Grid.RowSpan="2" Opacity="0.5"/>
+                <RadioButton IsEnabled="False" GroupName="Wähle ein Zahnrad"  x:Name="rtb_Kegelrad" Content="Kegelzahnrad (auf Anfrage)" VerticalAlignment="Top" FontFamily="Calibri" FontSize="18" Margin="40,10,10,0" Opacity="0.5"/>
             </Grid>
             <Grid x:Name="gr_Innenzahnrad" HorizontalAlignment="Left" Height="195" Margin="315,263,0,0" VerticalAlignment="Top" Width="300">
                 <Grid.Background>
@@ -587,10 +587,10 @@
                     </LinearGradientBrush>
                 </Grid.Background>
                 <Image  x:Name="Im_Innenzahnrad" HorizontalAlignment="Left" Height="134" Margin="86,49,0,0" VerticalAlignment="Top" Width="131" Source="/Bilder/Innenrad.PNG"/>
-                <RadioButton GroupName="Wähle ein Zahnrad" x:Name="rtb_Innenzahnrad" Content="Innenzahnrad (auf Anfrage)" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="18" Margin="40,10,0,0"/>
+                <RadioButton GroupName="Wähle ein Zahnrad" x:Name="rtb_Innenzahnrad" Content="Innenzahnrad" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="18" Margin="86,10,0,0"/>
             </Grid>
         </Grid>
-        <Label Content="Zahnrad Zar GmbH und Co. KG" HorizontalAlignment="Center" Margin="270,35,318,0" VerticalAlignment="Top" Height="83" Width="806" FontSize="60" FontWeight="Bold" FontFamily="Yu Gothic UI Light"/>
+        <Label Content="Zahnrad Zar GmbH und Co. KG" HorizontalAlignment="Center" Margin="266,30,318,0" VerticalAlignment="Top" Height="90" Width="810" FontSize="60" FontWeight="Bold" FontFamily="Yu Gothic UI Light"/>
         <Grid HorizontalAlignment="Left" Height="115" Margin="26,515,0,0" VerticalAlignment="Top" Width="287" Background="#FF737687">
             <Label Content="Wähle ein Kopfspiel:" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="24" Margin="10,10,0,0" Width="267" FontWeight="Bold">
                 <Label.Background>
@@ -608,12 +608,8 @@
                     </LinearGradientBrush>
                 </Label.Background>
             </Label>
-
-            <ComboBox x:Name="CB_Kopfspiel" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="267" Height="31" FontFamily="Calibri" FontSize="20">
-                <ComboBoxItem x:Name="Kopfspiel167" IsSelected="True" >0,167</ComboBoxItem>
-                <ComboBoxItem x:Name="Kopfspiel01"  >0,1</ComboBoxItem>
-                <ComboBoxItem x:Name="Kopfspiel02"  >0,3</ComboBoxItem>
-            </ComboBox>
+            <TextBox HorizontalAlignment="Left" Height="33" Margin="10,62,0,0" TextWrapping="Wrap" Text="0,167" VerticalAlignment="Top" Width="109" IsEnabled="False" FontSize="20" x:Name="TB_0167" />
+            <CheckBox Content="Individuell" x:Name="CB_Kopfspiel" HorizontalAlignment="Left" Margin="151,62,0,0" VerticalAlignment="Top" Width="114" Unchecked="CB_Kopfspiel_Unchecked" Checked="CB_Kopfspiel_Checked" IsChecked="False" Height="33" FontSize="18" VerticalContentAlignment="Center"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="119" Margin="26,375,0,0" VerticalAlignment="Top" Width="287" Background="#FF737687">
             <Label HorizontalAlignment="Left"  VerticalAlignment="Top" FontFamily="Calibri" FontSize="24" Width="267" Content="Wähle ein Werkstoff:" Margin="10,10,0,0" FontWeight="Bold" >
@@ -858,7 +854,7 @@
             <Button Click="Button_Click" Content="Info Zahnradparameter" HorizontalAlignment="Left" Margin="694,12,0,0" VerticalAlignment="Top" Width="220" Height="45" FontFamily="Calibri" FontSize="20" FontStyle="Italic" FontWeight="Bold"/>
             <Button Click="Button_Click_2" Content="3D-Modell erstellen" HorizontalAlignment="Left" Margin="364,55,0,0" VerticalAlignment="Top" Width="208" Height="52" FontFamily="Calibri" FontSize="20" FontStyle="Italic" FontWeight="Bold"/>
         </Grid>
-        <Label x:Name="lb_Geschäftsführer" Content="Geschäftsführer Kai Mecke" Margin="10,105,1203,737" FontSize="14"/>
+        <Label x:Name="lb_Geschäftsführer" Content="Geschäftsführer Kai Mecke" Margin="10,100,1203,742" FontSize="14"/>
 
 
     </Grid>
