@@ -152,10 +152,10 @@
     <Resource Include="Bilder\Zahnräder.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Bilder\Zahnrad Hintergrund.jpg" />
+    <Resource Include="Bilder\Zahnradparameter.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Bilder\Zahnradparameter.PNG" />
+    <Resource Include="Bilder\Zahnrad Hintergrund.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
