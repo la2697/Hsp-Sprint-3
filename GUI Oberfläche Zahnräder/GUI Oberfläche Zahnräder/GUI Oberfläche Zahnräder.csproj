@@ -157,5 +157,13 @@
   <ItemGroup>
     <Resource Include="Bilder\Zahnrad Hintergrund.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Interop.HybridShapeTypeLib.dll" />
+    <Content Include="Interop.INFITF.dll" />
+    <Content Include="Interop.KnowledgewareTypeLib.dll" />
+    <Content Include="Interop.MECMOD.dll" />
+    <Content Include="Interop.PARTITF.dll" />
+    <Content Include="Interop.ProductStructureTypeLib.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
