@@ -384,7 +384,7 @@ namespace GUI_Oberfläche_Zahnräder
                 if (Zahlenprüfung(Zahlencheck) == true)
                 {
                     iv.c = Convert.ToDouble(TB_0167.Text);
-                    if (iv.c < 0.1 || > 0.3)
+                    if (iv.c <  0.3)
                     {
                         MessageBox.Show("Fehler! Kopfspiel kann nur eine positive Zahl betragen.");
                         iv.Fehler = 1;

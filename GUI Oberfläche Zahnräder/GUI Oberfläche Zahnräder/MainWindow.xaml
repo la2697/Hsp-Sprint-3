@@ -6,14 +6,14 @@
         xmlns:local="clr-namespace:GUI_Oberfläche_Zahnräder"
         mc:Ignorable="d"
 
-    Title="Zahnradprogrammierung" Height="900" Width="1400" ResizeMode="CanResize">
+    Title="Zahnradprogrammierung" Height="1000" Width="1400" ResizeMode="CanResize">
     <Grid>
         <Grid Margin="0,150,10,0" VerticalAlignment="Top" HorizontalAlignment="Left">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1071*"/>
                 <ColumnDefinition Width="298*"/>
             </Grid.ColumnDefinitions>
-            <Image Source="/Bilder/Zahnrad Hintergrund.jpg" VerticalAlignment="Top" HorizontalAlignment="Left" Opacity="0.9" Margin="10,0,-10,-125" Height="716" Width="1369" Grid.ColumnSpan="2"/>
+            <Image Source="/Bilder/Zahnrad Hintergrund.jpg" HorizontalAlignment="Left" Opacity="0.9" Margin="10,0,-10.2,-124.8" Width="1369" Grid.ColumnSpan="2"/>
             <Grid HorizontalAlignment="Left" Height="416" Margin="969,271,0,-96" VerticalAlignment="Top" Width="400" Background="#FF737687" Grid.ColumnSpan="2">
                 <Label x:Name="lb_Preis" Content="Preis [€]:" HorizontalAlignment="Left" Margin="10,369,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="19" Width="380" Height="33">
                     <Label.Background>
@@ -590,7 +590,7 @@
                 <RadioButton GroupName="Wähle ein Zahnrad" x:Name="rtb_Innenzahnrad" Content="Innenzahnrad" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="18" Margin="86,10,0,0"/>
             </Grid>
         </Grid>
-        <Label Content="Zahnrad Zar GmbH und Co. KG" HorizontalAlignment="Center" Margin="266,30,318,0" VerticalAlignment="Top" Height="90" Width="810" FontSize="60" FontWeight="Bold" FontFamily="Yu Gothic UI Light"/>
+        <Label Content="Zahnrad Zar GmbH und Co. KG" HorizontalAlignment="Center" Margin="266,30,318,0" VerticalAlignment="Top" Height="90" Width="810" FontSize="50" FontWeight="Bold" FontFamily="Yu Gothic UI Light"/>
         <Grid HorizontalAlignment="Left" Height="115" Margin="26,515,0,0" VerticalAlignment="Top" Width="287" Background="#FF737687">
             <Label Content="Wähle ein Kopfspiel:" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="24" Margin="10,10,0,0" Width="267" FontWeight="Bold">
                 <Label.Background>
