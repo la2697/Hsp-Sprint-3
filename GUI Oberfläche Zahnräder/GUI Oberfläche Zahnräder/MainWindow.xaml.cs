@@ -40,71 +40,7 @@ namespace GUI_Oberfläche_Zahnräder
             }
         }
 
-        public class Außenverzahnung
-        {
-            //Eingabevariablen
-            public double m;                            //Modul
-            public double c;                            //Kopfspiel Standard
-            public double d;                            //Teilkreisdurchmesser
-            public double z;                            //Zähnezahl
-            public double t;                            //Werkstoffdicke
-
-
-            //Help
-            public int Fehler;
-
-            //Werkstoffangaben
-            public double Preis_S235JR = 3.63;          //Preis S235JR
-            public double Preis_GJL = 0.80;             //Preis GJL
-            public double Preis_GJS = 1.10;             //Preis GJS
-
-
-            //Ausgabevariablen
-            public double h;                            //Zahnhöhe
-            public double ha;                           //Zahnkopfhöhe
-            public double hf;                           //Zahnfußhöhe
-            public double df;                           //Fußkreisdurchmesser
-            public double da;                           //Kopfkreisdurchmesser
-            public double p;                            //Teilung
-            public double material;                     //Materialdichte g/cm3
-            public double preis;                        //Preis pro kg
-            public double A;                            //Flächeninhalt mm2
-            public double V;                            //Volumen mm3
-            public double M;                            //Masse g
-            public double Wert;                         //Preis
-
-           
-
-
-            public void Berechnung()
-            {
-                //Formeln
-                d = m * z;
-                h = (2 * m) + c;
-                p = Math.PI * m;
-                da = d + (2 + m);
-                ha = m;
-                hf = m + c;
-                df = d - 2 * (m + c);
-                A = (Math.PI * d * d) / 4;
-                V = A * t;
-                M = V * 1 / 1000 * material;
-                Wert = M * 1 / 1000 * preis;
-
-                //Rundung
-                d = Math.Round(d, 2);
-                p = Math.Round(p, 2);
-                h = Math.Round(h, 2);
-                da = Math.Round(da, 2);
-                ha = Math.Round(ha, 2);
-                df = Math.Round(df, 2);
-                A = Math.Round(A, 2);
-                V = Math.Round(V, 2);
-                M = Math.Round(M, 2);
-                Wert = Math.Round(Wert, 2);
-            }
-
-        }
+        Außenverzahnung av = new Außenverzahnung();
 
         public class Innenverzahnung
         {
@@ -175,9 +111,6 @@ namespace GUI_Oberfläche_Zahnräder
         public class Schrägverzahnung
         {
             //Eingabevariablen
-            public double mt;                           //Stirnmodul
-            public double mn;                           //Normalmodul
-            public double pt;                           //Stirnteilung
             public double pn;                           //Normalteilung
             public double c;                            //Kopfspiel Standard
             public double d;                            //Teilkreisdurchmesser
@@ -196,12 +129,15 @@ namespace GUI_Oberfläche_Zahnräder
 
 
             //Ausgabevariablen
+            public double mn;                           //Normalmodul
             public double h;                            //Zahnhöhe
             public double ha;                           //Zahnkopfhöhe
             public double hf;                           //Zahnfußhöhe
             public double df;                           //Fußkreisdurchmesser
             public double da;                           //Kopfkreisdurchmesser
             public double p;                            //Teilung
+            public double pt;                           //Stirnteilung
+            public double mt;                           //Stirnmodul
             public double material;                     //Materialdichte g/cm3
             public double preis;                        //Preis pro kg
             public double A;                            //Flächeninhalt mm2
@@ -229,6 +165,7 @@ namespace GUI_Oberfläche_Zahnräder
                 Wert = M * 1 / 1000 * preis;
 
                 //Rundung
+                mn = Math.Round(mn, 2);
                 d = Math.Round(d, 2);
                 mt = Math.Round(mt, 2);
                 pt = Math.Round(pt, 2);
@@ -370,7 +307,6 @@ namespace GUI_Oberfläche_Zahnräder
                     lbl_Kopfkreisdurchmesser.Content = Convert.ToString(av.da);
                     lbl_Gewicht.Content = Convert.ToString(av.M);
                     lbl_Preis.Content = Convert.ToString(av.Wert);
-                    MessageBox.Show(Convert.ToString(av.c));
 
                     //Felder ausbleichen
                     lbl_stirnmodul.IsEnabled = false;
@@ -617,6 +553,9 @@ namespace GUI_Oberfläche_Zahnräder
                     lbl_Gewicht.Content = Convert.ToString(sv.M);
                     lbl_Preis.Content = Convert.ToString(sv.Wert);
                     tb_Winkel.Text = Convert.ToString(sv.beta);
+                    lbl_stirnmodul.Content = Convert.ToString(sv.mt);
+                    lbl_stirnteilung.Content = Convert.ToString(sv.pt);
+                    lbl_Teilung.Content = Convert.ToString(sv.pn);
                 }
             }
 
@@ -651,6 +590,10 @@ namespace GUI_Oberfläche_Zahnräder
             txt_Dicke.Text = " ";
             tb_Winkel.Text = " ";
             TB_0167.Text = "0,167";
+            lbl_stirnteilung.Content = " ";
+            lbl_stirnmodul.Content = " ";
+            lb_Schrägungswinkel.Content = " ";
+
 
             //ComboButton und RadioButton zurücksetzen
             S235JR.IsSelected = true;
@@ -694,7 +637,7 @@ namespace GUI_Oberfläche_Zahnräder
         //CatiaControl
         
         
-            private void CatiaControl()
+            public void CatiaControl()
             {
                 try
                 {
@@ -704,23 +647,29 @@ namespace GUI_Oberfläche_Zahnräder
                     // Finde Catia Prozess
                     if (cc.CATIALaeuft())
                     {
-                        Console.WriteLine("0");
+                        //Console.WriteLine("0");
 
                         // Öffne ein neues Part
                         cc.ErzeugePart();
-                        Console.WriteLine("1");
+                        //Console.WriteLine("1");
+
+                        //cc.Mittelpunktbestimmmung(av)
 
                         // Erstelle eine Skizze
-                        cc.ErstelleLeereSkizze();
-                        Console.WriteLine("2");
+                        //cc.ErstelleLeereSkizze();
+                        //Console.WriteLine("2");
 
                         // Generiere ein Profil
-                        cc.ErzeugeProfil(20, 10);
-                        Console.WriteLine("3");
+                        //cc.ErzeugeProfil(20, 10);
+                        //Console.WriteLine("3");
 
                         // Extrudiere Balken
-                        cc.ErzeugeBalken(300);
-                        Console.WriteLine("4");
+                        //cc.ErzeugeBalken(300);
+                        //Console.WriteLine("4");
+
+                        cc.Stirnzahnrad(av);
+
+                        cc.Dicke(av);
                     }
                     else
                     {

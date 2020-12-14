@@ -469,7 +469,7 @@
                                 </LinearGradientBrush>
                             </Label.Background>
                         </Label>
-                        <Label Content="" x:Name="lbl_Gewicht" HorizontalAlignment="Left" Margin="185,334,0,0" VerticalAlignment="Top" Width="88" Height="30" FontSize="19" FontFamily="Calibri" Grid.Column="1">
+                        <Label Content="" x:Name="lbl_Gewicht" HorizontalAlignment="Left" Margin="183.4,332,0,0" VerticalAlignment="Top" Width="88" Height="30" FontSize="19" FontFamily="Calibri" Grid.Column="1">
                             <Label.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                     <LinearGradientBrush.RelativeTransform>
@@ -485,7 +485,7 @@
                                 </LinearGradientBrush>
                             </Label.Background>
                         </Label>
-                        <Label Content="" x:Name="lbl_Preis" HorizontalAlignment="Left" Margin="185,368,0,0" VerticalAlignment="Top" Width="88" Height="30" FontSize="19" FontFamily="Calibri" Grid.Column="1">
+                        <Label Content="" x:Name="lbl_Preis" HorizontalAlignment="Left" Margin="183.4,370,0,0" VerticalAlignment="Top" Width="88" Height="30" FontSize="19" FontFamily="Calibri" Grid.Column="1">
                             <Label.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                     <LinearGradientBrush.RelativeTransform>
@@ -845,7 +845,7 @@
                 <RadioButton Click="rtb_Schräg_Click" GroupName="Wähle ein Zahnrad" x:Name="rtb_Schräg" Content="Stirnrad schrägverzahnt" Margin="10,10,135,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="18" Height="22" Grid.ColumnSpan="2"/>
                 <Label IsEnabled="False" x:Name="lb_Winkeltext" Content="Schrägungswinkel in [°]:" HorizontalAlignment="Left" Margin="0,37,0,0" VerticalAlignment="Top" Width="178" Grid.Column="1"/>
                 <Slider IsEnabled="False" IsSnapToTickEnabled="true" Grid.Column="1" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top" Width="164" Maximum="25" Minimum="1" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True" TickPlacement="TopLeft" Cursor="" Name="sliderbeta" Value="1"/>
-                <TextBox IsEnabled="False" Grid.Column="1" HorizontalAlignment="Left" Height="18" Margin="179,69,0,0" TextWrapping="Wrap" Text="{Binding ElementName=sliderbeta, Path=Value, UpdateSourceTrigger=LostFocus}" VerticalAlignment="Top" Width="35" x:Name="tb_Winkel"/>
+                <TextBox IsEnabled="False" Grid.Column="1" HorizontalAlignment="Left" Height="18" Margin="179,69,0,0" TextWrapping="Wrap" Text="{Binding ElementName=sliderbeta, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="35" x:Name="tb_Winkel"/>
             </Grid>
             <Grid x:Name="gr_Innenzahnrad" HorizontalAlignment="Left" Height="90" Margin="10,265,0,0" VerticalAlignment="Top" Width="340">
                 <Grid.Background>
