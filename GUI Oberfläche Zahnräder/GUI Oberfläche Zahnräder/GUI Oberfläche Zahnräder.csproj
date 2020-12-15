@@ -35,30 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Interop.HybridShapeTypeLib">
-      <HintPath>D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\Using Window\Interop.HybridShapeTypeLib.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Interop.INFITF">
-      <HintPath>D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\Using Window\Interop.INFITF.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Interop.KnowledgewareTypeLib">
-      <HintPath>D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\Using Window\Interop.KnowledgewareTypeLib.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Interop.MECMOD">
-      <HintPath>D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\Using Window\Interop.MECMOD.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Interop.PARTITF">
-      <HintPath>D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\Using Window\Interop.PARTITF.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Interop.ProductStructureTypeLib">
-      <HintPath>D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\Using Window\Interop.ProductStructureTypeLib.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -79,11 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CodeFile1.cs" />
-    <Compile Include="CodeFile2.cs" />
-    <Compile Include="Window1.xaml.cs">
-      <DependentUpon>Window1.xaml</DependentUpon>
-    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -96,10 +67,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Window1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -151,20 +118,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Bilder\Zahnräder.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Bilder\Zahnradparameter.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Bilder\Zahnrad Hintergrund.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Interop.HybridShapeTypeLib.dll" />
-    <Content Include="Interop.INFITF.dll" />
-    <Content Include="Interop.KnowledgewareTypeLib.dll" />
-    <Content Include="Interop.MECMOD.dll" />
-    <Content Include="Interop.PARTITF.dll" />
-    <Content Include="Interop.ProductStructureTypeLib.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

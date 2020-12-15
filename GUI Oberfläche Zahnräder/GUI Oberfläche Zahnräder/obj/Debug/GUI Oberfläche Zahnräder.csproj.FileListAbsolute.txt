@@ -1,0 +1,30 @@
+C:\Users\Juliu\OneDrive\Dokumente\GitHub\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\bin\Debug\GUI Oberfläche Zahnräder.exe.config
+C:\Users\Juliu\OneDrive\Dokumente\GitHub\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\bin\Debug\GUI Oberfläche Zahnräder.exe
+C:\Users\Juliu\OneDrive\Dokumente\GitHub\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\bin\Debug\GUI Oberfläche Zahnräder.pdb
+C:\Users\Juliu\OneDrive\Dokumente\GitHub\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\GUI Oberfläche Zahnräder.csprojAssemblyReference.cache
+C:\Users\Juliu\OneDrive\Dokumente\GitHub\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\MainWindow.g.cs
+C:\Users\Juliu\OneDrive\Dokumente\GitHub\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\App.g.cs
+C:\Users\Juliu\OneDrive\Dokumente\GitHub\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\GUI Oberfläche Zahnräder_MarkupCompile.cache
+C:\Users\Juliu\OneDrive\Dokumente\GitHub\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\GUI Oberfläche Zahnräder_MarkupCompile.lref
+C:\Users\Juliu\OneDrive\Dokumente\GitHub\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\MainWindow.baml
+C:\Users\Juliu\OneDrive\Dokumente\GitHub\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\GUI Oberfläche Zahnräder.g.resources
+C:\Users\Juliu\OneDrive\Dokumente\GitHub\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\GUI_Oberfläche_Zahnräder.Properties.Resources.resources
+C:\Users\Juliu\OneDrive\Dokumente\GitHub\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\GUI Oberfläche Zahnräder.csproj.GenerateResource.cache
+C:\Users\Juliu\OneDrive\Dokumente\GitHub\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\GUI Oberfläche Zahnräder.csproj.CoreCompileInputs.cache
+C:\Users\Juliu\OneDrive\Dokumente\GitHub\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\GUI Oberfläche Zahnräder.exe
+C:\Users\Juliu\OneDrive\Dokumente\GitHub\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\GUI Oberfläche Zahnräder.pdb
+D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\bin\Debug\GUI Oberfläche Zahnräder.exe.config
+D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\bin\Debug\GUI Oberfläche Zahnräder.exe
+D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\bin\Debug\GUI Oberfläche Zahnräder.pdb
+D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\GUI Oberfläche Zahnräder.csprojAssemblyReference.cache
+D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\MainWindow.g.cs
+D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\App.g.cs
+D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\GUI Oberfläche Zahnräder_MarkupCompile.cache
+D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\GUI Oberfläche Zahnräder_MarkupCompile.lref
+D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\MainWindow.baml
+D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\GUI Oberfläche Zahnräder.g.resources
+D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\GUI_Oberfläche_Zahnräder.Properties.Resources.resources
+D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\GUI Oberfläche Zahnräder.csproj.GenerateResource.cache
+D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\GUI Oberfläche Zahnräder.csproj.CoreCompileInputs.cache
+D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\GUI Oberfläche Zahnräder.exe
+D:\Studium\Hochsprachenprogrammierung\Hsp-Sprint-3\GUI Oberfläche Zahnräder\GUI Oberfläche Zahnräder\obj\Debug\GUI Oberfläche Zahnräder.pdb
