@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI_Oberfläche_Zahnräder"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
+        Title="Parameteranzeige" Height="450" Width="800">
     <Grid>
         <Image Source="Bilder/Zahnradparameter.PNG"/>
     </Grid>

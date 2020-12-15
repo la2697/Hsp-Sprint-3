@@ -560,13 +560,6 @@ namespace GUI_Oberfläche_Zahnräder
             }
 
         }
-    
-
-        
-
-        
-        
-            
 
         private void btn_Zurück_Click(object sender, RoutedEventArgs e)
         {
@@ -633,56 +626,48 @@ namespace GUI_Oberfläche_Zahnräder
         }
 
         // // // // // // // // // // // // // // // //
-        
+
         //CatiaControl
-        
-        
-            public void CatiaControl()
+
+        public void CatiaControl()
+        {
+            try
             {
-                try
+
+                CatiaConnection cc = new CatiaConnection();
+
+                // Finde Catia Prozess
+                if (cc.CATIALaeuft())
                 {
 
-                    CatiaConnection cc = new CatiaConnection();
+                    // Öffne ein neues Part
+                    cc.ErzeugePart();
+                    
 
-                    // Finde Catia Prozess
-                    if (cc.CATIALaeuft())
-                    {
-                        //Console.WriteLine("0");
+                    // Erstelle eine Skizze
+                    cc.ErstelleLeereSkizze();
+                    
 
-                        // Öffne ein neues Part
-                        cc.ErzeugePart();
-                        //Console.WriteLine("1");
+                    // Generiere ein Profil
+                    cc.Stirnzahnrad(av);
+                    
 
-                        //cc.Mittelpunktbestimmmung(av)
-
-                        // Erstelle eine Skizze
-                        //cc.ErstelleLeereSkizze();
-                        //Console.WriteLine("2");
-
-                        // Generiere ein Profil
-                        //cc.ErzeugeProfil(20, 10);
-                        //Console.WriteLine("3");
-
-                        // Extrudiere Balken
-                        //cc.ErzeugeBalken(300);
-                        //Console.WriteLine("4");
-
-                        cc.Stirnzahnrad(av);
-
-                        cc.Dicke(av);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Laufende Catia Application nicht gefunden");
-                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message, "Exception aufgetreten");
+                    Console.WriteLine("Laufende Catia Application nicht gefunden");
                 }
-                Console.WriteLine("Fertig - Taste drücken.");
-                
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception aufgetreten");
+            }
+            
+
+        }
+
+        
+
 
         private void CB_Kopfspiel_Checked(object sender, RoutedEventArgs e)
         {
